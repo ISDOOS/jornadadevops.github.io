@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada do DevOps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .slider {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            text-align: center;
+        }
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-media a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jornada do DevOps</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="slider">
+            <div class="slide" id="post1">
+                <h2>Título do Post 1</h2>
+                <img src="imagem1.jpg" alt="Imagem do Post 1">
+                <a href="#blog">Leia mais</a>
+            </div>
+            <div class="slide" id="post2">
+                <h2>Título do Post 2</h2>
+                <img src="imagem2.jpg" alt="Imagem do Post 2">
+                <a href="#recursos">Leia mais</a>
+            </div>
+            <div class="slide" id="post3">
+                <h2>Título do Post 3</h2>
+                <img src="imagem3.jpg" alt="Imagem do Post 3">
+                <a href="#projetos">Leia mais</a>
+            </div>
+            <div class="slide" id="post4">
+                <h2>Título do Post 4</h2>
+                <img src="imagem4.jpg" alt="Imagem do Post 4">
+                <a href="#sobre">Leia mais</a>
+            </div>
+            <div class="slide" id="post5">
+                <h2>Título do Post 5</h2>
+                <img src="imagem5.jpg" alt="Imagem do Post 5">
+                <a href="#home">Leia mais</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/seuperfil">LinkedIn</a>
+            <a href="https://www.instagram.com/seuperfil">Instagram</a>
+            <a href="https://twitter.com/seuperfil">Twitter</a>
+        </div>
+        <div class="contact-info">
+            <p>Contato: contato@jornadadevops.com</p>
+            <p>Telefone: (xx) xxxx-xxxx</p>
+        </div>
+    </footer>
+
+    <script>
+        // Código JavaScript para o slider
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Inicializa o slider
+        showSlide(currentIndex);
+        setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
+    </script>
+</body>
+</html>
