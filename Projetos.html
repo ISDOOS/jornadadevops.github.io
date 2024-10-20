@@ -6,53 +6,47 @@
     <title>Projetos - Jornada do DevOps</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace; /* Fonte digital */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Impede a barra de rolagem */
             background-color: black; /* Fundo preto */
-            position: relative; /* Para posicionar o fundo corretamente */
-            height: 100vh; /* Altura total da tela */
+            color: white; /* Texto padrão em branco */
+            overflow: hidden; /* Para evitar scroll */
         }
 
-        .matrix-code {
-            position: absolute; /* Posiciona a camada de código na frente */
-            top: 0; /* Começa do topo */
-            left: 0;
-            right: 0;
-            height: 100%;
-            overflow: hidden; /* Oculta o excesso */
-            white-space: nowrap; /* Impede a quebra de linha */
-            pointer-events: none; /* Desabilita interações */
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para o cabeçalho */
+            color: white; /* Texto em branco */
+            padding: 20px; /* Espaçamento interno */
+            text-align: center; /* Centraliza o texto */
         }
 
-        .matrix-code span {
-            display: inline-block; /* Cada palavra ocupa seu próprio espaço */
-            font-size: 20px; /* Tamanho da fonte */
-            animation: drop 1.5s linear infinite; /* Animação contínua */
-            opacity: 0.8; /* Opacidade do texto */
-            color: #00ff00; /* Verde do Matrix */
-            text-shadow: 
-                0 0 10px #00ff00, /* Brilho verde */
-                0 0 20px #00ff00, /* Sombreamento mais forte */
-                0 0 30px #00ff00, /* Efeito de profundidade */
-                0 0 40px #00ff00; /* Efeito de destaque */
-            animation-delay: calc(0.1s * var(--i)); /* Delay variável */
+        nav ul {
+            list-style-type: none; /* Remove as marcas de lista */
+            padding: 0; /* Remove o padding padrão */
         }
 
-        @keyframes drop {
-            0% { transform: translateY(-100%); } /* Começa fora da tela */
-            100% { transform: translateY(100vh); } /* Termina na parte inferior */
+        nav ul li {
+            display: inline; /* Exibe os itens da lista em linha */
+            margin: 0 15px; /* Espaçamento entre os itens */
         }
 
-        /* Estilos para o conteúdo dos projetos */
+        nav a {
+            color: white; /* Cor dos links */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+
         .project-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             position: relative; /* Para que os projetos fiquem sobrepostos ao efeito */
             z-index: 1; /* Acima do efeito de texto */
-            color: black; /* Texto dos projetos em branco para melhor visibilidade */
+            color: black; /* Texto dos projetos em preto */
             background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente, mais escuro */
             border-radius: 8px; /* Cantos arredondados para o contêiner dos projetos */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
@@ -64,7 +58,7 @@
             margin-bottom: 30px;
             padding: 20px;
             border-radius: 8px;
-            background-color: rgba(224, 224, 224, 0.9); /* Cor de fundo dos projetos com leve transparência */
+            background-color: #e0e0e0; /* Cor de fundo */
         }
 
         .project img {
@@ -81,76 +75,107 @@
         .project-title {
             font-size: 24px;
             margin-bottom: 10px;
+            color: black; /* Cor do título do projeto em preto */
         }
 
         .project-summary {
             font-size: 16px;
             margin-bottom: 10px;
+            color: black; /* Cor do resumo do projeto em preto */
         }
 
         .project a {
-            color: #0077cc;
+            color: #0077cc; /* Cor dos links */
             text-decoration: none;
         }
 
         .project a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+
+        /* Efeito de Cascata */
+        .matrix-effect {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            color: #0f0; /* Verde */
+            white-space: nowrap; /* Não quebra a linha */
+            z-index: 0; /* Atrás dos projetos */
+        }
+
+        .matrix-effect span {
+            display: block;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh); /* Move até a parte inferior da tela */
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="matrix-code">
-        <span style="--i:0;">Automação</span>
-        <span style="--i:1;">CI/CD</span>
-        <span style="--i:2;">Docker</span>
-        <span style="--i:3;">Kubernetes</span>
-        <span style="--i:4;">Infraestrutura</span>
-        <span style="--i:5;">Agilidade</span>
-        <span style="--i:6;">Monitoramento</span>
-        <span style="--i:7;">Escalabilidade</span>
-        <span style="--i:8;">DevOps</span>
-        <span style="--i:9;">Cloud</span>
-        <span style="--i:10;">Segurança</span>
-        <span style="--i:11;">SRE</span>
-        <span style="--i:12;">Microserviços</span>
-        <span style="--i:13;">Integração</span>
-        <span style="--i:14;">Deployment</span>
-        <span style="--i:15;">Pipeline</span>
-        <span style="--i:16;">101</span>
-        <span style="--i:17;">110</span>
-        <span style="--i:18;">011</span>
-        <span style="--i:19;">000</span>
-        <span style="--i:20;">111</span>
-        <span style="--i:21;">010</span>
-        <span style="--i:22;">001</span>
-        <span style="--i:23;">100</span>
-        <span style="--i:24;">1110</span>
-        <span style="--i:25;">0011</span>
-        <span style="--i:26;">1010</span>
-        <span style="--i:27;">1101</span>
-        <span style="--i:28;">1001</span>
-        <span style="--i:29;">0110</span>
-        <span style="--i:30;">1011</span>
-        <span style="--i:31;">0001</span>
+<header>
+    <h1>Bem-vindo a minha Jornada DevOps</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="projetos.html">Projetos</a></li> <!-- Link para Projetos -->
+        </ul>
+    </nav>
+</header>
+
+<div class="matrix-effect">
+    <!-- Exemplo de palavras relacionadas ao DevOps e números binários -->
+    <span>DevOps</span>
+    <span>Agilidade</span>
+    <span>Automação</span>
+    <span>CI/CD</span>
+    <span>Docker</span>
+    <span>Kubernetes</span>
+    <span>Microservices</span>
+    <span>Infraestrutura como Código</span>
+    <span>Cloud Computing</span>
+    <span>Versionamento</span>
+    <span>Git</span>
+    <span>Binary 0</span>
+    <span>Binary 1</span>
+    <span>Scripts</span>
+    <span>Monitoramento</span>
+    <span>Segurança</span>
+</div>
+
+<div class="project-container">
+    <!-- Projeto 1 -->
+    <div class="project" style="background-color: #f0f0f0;">
+        <img src="https://seu-usuario.github.io/repositorio/imagem1.jpg" alt="Imagem do Projeto 1">
+        <div class="project-content">
+            <h2 class="project-title">Projeto 1</h2>
+            <p class="project-summary">Resumo breve do projeto 1.</p>
+            <a href="https://github.com/seu-usuario/repositorio1" target="_blank">Visitar repositório</a>
+        </div>
     </div>
 
-    <div class="project-container">
-        <header>
-            <h1>Projetos</h1>
-            <nav>
-                <a href="index.html">Início</a> <!-- Link para voltar à página principal -->
-            </nav>
-        </header>
+    <!-- Adicione mais projetos aqui -->
+</div>
 
-        <div class="project" style="background-color: #f0f0f0;">
-            <img src="https://seu-usuario.github.io/repositorio/imagem1.jpg" alt="Imagem do Projeto 1">
-            <div class="project-content">
-                <h2 class="project-title">Projeto 1</h2>
-                <p class="project-summary">Resumo breve do projeto 1.</p>
-                <a href="https://github.com/seu-usuario/repositorio1" target="_blank">Visitar repositório</a>
-            </div>
-        </div>
+<footer>
+    <p>© 2024 Jornada do DevOps</p>
+</footer>
 
-        <!-- Adicione mais projetos aqui -->
- 
+</body>
+</html>
