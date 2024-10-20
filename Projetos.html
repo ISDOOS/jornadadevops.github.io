@@ -49,7 +49,7 @@
             position: relative; /* Para que os projetos fiquem sobrepostos ao efeito */
             z-index: 1; /* Acima do efeito de texto */
             color: black; /* Texto dos projetos em preto */
-            background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente, mais escuro */
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente, mais claro */
             border-radius: 8px; /* Cantos arredondados para o contêiner dos projetos */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
         }
@@ -114,6 +114,7 @@
             display: block;
             opacity: 0.8;
             animation: fall linear infinite;
+            animation-duration: 5s; /* Ajuste a duração da animação */
         }
 
         @keyframes fall {
