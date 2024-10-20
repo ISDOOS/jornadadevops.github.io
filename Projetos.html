@@ -6,58 +6,54 @@
     <title>Projetos - Jornada do DevOps</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace; /* Fonte digital */
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: hidden; /* Impede a barra de rolagem */
             background-color: black; /* Fundo preto */
-            color: #00ff00; /* Texto verde */
-        }
-
-        @keyframes matrix {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
+            position: relative; /* Para posicionar o fundo corretamente */
+            height: 100vh; /* Altura total da tela */
         }
 
         .matrix-code {
-            position: absolute;
-            top: -100%;
+            position: absolute; /* Posiciona a camada de código na frente */
+            top: 0; /* Começa do topo */
             left: 0;
             right: 0;
             height: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            pointer-events: none;
+            overflow: hidden; /* Oculta o excesso */
+            white-space: nowrap; /* Impede a quebra de linha */
+            pointer-events: none; /* Desabilita interações */
         }
 
         .matrix-code span {
-            display: inline-block;
-            font-size: 20px;
-            animation: drop 1.5s linear infinite;
-            opacity: 0.8;
+            display: inline-block; /* Cada palavra ocupa seu próprio espaço */
+            font-size: 20px; /* Tamanho da fonte */
+            animation: drop 1.5s linear infinite; /* Animação contínua */
+            opacity: 0.8; /* Opacidade do texto */
             color: #00ff00; /* Verde do Matrix */
-            animation-delay: calc(0.1s * var(--i));
+            text-shadow: 
+                0 0 10px #00ff00, /* Brilho verde */
+                0 0 20px #00ff00, /* Sombreamento mais forte */
+                0 0 30px #00ff00, /* Efeito de profundidade */
+                0 0 40px #00ff00; /* Efeito de destaque */
+            animation-delay: calc(0.1s * var(--i)); /* Delay variável */
         }
 
         @keyframes drop {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100vh); }
+            0% { transform: translateY(-100%); } /* Começa fora da tela */
+            100% { transform: translateY(100vh); } /* Termina na parte inferior */
         }
 
-        header {
-            background-color: rgba(0, 119, 204, 0.8);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            z-index: 1; /* Coloca o cabeçalho acima do fundo */
-        }
-
+        /* Estilos para o conteúdo dos projetos */
         .project-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
-            z-index: 1; /* Coloca o conteúdo acima do fundo */
+            position: relative; /* Para que os projetos fiquem sobrepostos ao efeito */
+            z-index: 1; /* Acima do efeito de texto */
+            color: white; /* Texto dos projetos em branco para melhor visibilidade */
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
         }
 
         .project {
@@ -66,7 +62,7 @@
             margin-bottom: 30px;
             padding: 20px;
             border-radius: 8px;
-            background-color: rgba(224, 224, 224, 0.8); /* Fundo semi-transparente */
+            background-color: #e0e0e0; /* Cor de fundo dos projetos */
         }
 
         .project img {
@@ -98,53 +94,53 @@
         .project a:hover {
             text-decoration: underline;
         }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: rgba(0, 119, 204, 0.8);
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
 
     <div class="matrix-code">
-        <!-- Adicione mais caracteres, variando os delays -->
-        <span style="--i:0;">1</span>
-        <span style="--i:1;">0</span>
-        <span style="--i:2;">1</span>
-        <span style="--i:3;">1</span>
-        <span style="--i:4;">0</span>
-        <span style="--i:5;">1</span>
-        <span style="--i:6;">0</span>
-        <span style="--i:7;">0</span>
-        <span style="--i:8;">1</span>
-        <span style="--i:9;">0</span>
-        <span style="--i:10;">1</span>
-        <span style="--i:11;">1</span>
-        <span style="--i:12;">0</span>
-        <span style="--i:13;">0</span>
-        <span style="--i:14;">1</span>
-        <span style="--i:15;">A</span>
-        <span style="--i:16;">B</span>
-        <span style="--i:17;">C</span>
-        <span style="--i:18;">#</span>
-        <span style="--i:19;">@</span>
+        <span style="--i:0;">Automação</span>
+        <span style="--i:1;">CI/CD</span>
+        <span style="--i:2;">Docker</span>
+        <span style="--i:3;">Kubernetes</span>
+        <span style="--i:4;">Infraestrutura</span>
+        <span style="--i:5;">Agilidade</span>
+        <span style="--i:6;">Monitoramento</span>
+        <span style="--i:7;">Escalabilidade</span>
+        <span style="--i:8;">DevOps</span>
+        <span style="--i:9;">Cloud</span>
+        <span style="--i:10;">Segurança</span>
+        <span style="--i:11;">SRE</span>
+        <span style="--i:12;">Microserviços</span>
+        <span style="--i:13;">Integração</span>
+        <span style="--i:14;">Deployment</span>
+        <span style="--i:15;">Pipeline</span>
+        <span style="--i:16;">101</span>
+        <span style="--i:17;">110</span>
+        <span style="--i:18;">011</span>
+        <span style="--i:19;">000</span>
+        <span style="--i:20;">111</span>
+        <span style="--i:21;">010</span>
+        <span style="--i:22;">001</span>
+        <span style="--i:23;">100</span>
+        <span style="--i:24;">1110</span>
+        <span style="--i:25;">0011</span>
+        <span style="--i:26;">1010</span>
+        <span style="--i:27;">1101</span>
+        <span style="--i:28;">1001</span>
+        <span style="--i:29;">0110</span>
+        <span style="--i:30;">1011</span>
+        <span style="--i:31;">0001</span>
     </div>
 
-    <header>
-        <h1>Projetos</h1>
-        <nav>
-            <a href="index.html" style="color: white;">Início</a> <!-- Link para voltar à página principal -->
-        </nav>
-    </header>
-
     <div class="project-container">
-        <!-- Projeto 1 -->
+        <header>
+            <h1>Projetos</h1>
+            <nav>
+                <a href="index.html">Início</a> <!-- Link para voltar à página principal -->
+            </nav>
+        </header>
+
         <div class="project" style="background-color: #f0f0f0;">
             <img src="https://seu-usuario.github.io/repositorio/imagem1.jpg" alt="Imagem do Projeto 1">
             <div class="project-content">
