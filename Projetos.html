@@ -19,6 +19,8 @@
             color: white; /* Texto em branco */
             padding: 20px; /* Espaçamento interno */
             text-align: center; /* Centraliza o texto */
+            position: relative; /* Para garantir que o cabeçalho fique acima do efeito */
+            z-index: 2; /* Acima do efeito de texto */
         }
 
         nav ul {
@@ -126,19 +128,6 @@
 </head>
 <body>
 
-<header>
-    <h1>Bem-vindo a minha Jornada DevOps</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#recursos">Recursos</a></li>
-            <li><a href="projetos.html">Projetos</a></li> <!-- Link para Projetos -->
-        </ul>
-    </nav>
-</header>
-
 <div class="matrix-effect">
     <!-- Exemplo de palavras relacionadas ao DevOps e números binários -->
     <span>DevOps</span>
@@ -158,6 +147,19 @@
     <span>Monitoramento</span>
     <span>Segurança</span>
 </div>
+
+<header>
+    <h1>Bem-vindo a minha Jornada DevOps</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="projetos.html">Projetos</a></li> <!-- Link para Projetos -->
+        </ul>
+    </nav>
+</header>
 
 <div class="project-container">
     <!-- Projeto 1 -->
