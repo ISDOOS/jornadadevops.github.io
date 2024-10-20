@@ -103,8 +103,8 @@
             position: fixed; /* Muda para fixed para cobrir toda a tela */
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%; /* Garante que cubra toda a tela */
+            width: 100vw; /* Largura total da janela */
+            height: 100vh; /* Altura total da janela */
             overflow: hidden;
             color: #0f0; /* Verde */
             white-space: nowrap; /* Não quebra a linha */
@@ -116,6 +116,7 @@
             opacity: 0.8;
             animation: fall linear infinite;
             animation-duration: 5s; /* Ajuste a duração da animação */
+            animation-delay: calc(-1s * var(--i)); /* Adiciona atraso para os spans */
         }
 
         @keyframes fall {
@@ -132,22 +133,22 @@
 
 <div class="matrix-effect">
     <!-- Exemplo de palavras relacionadas ao DevOps e números binários -->
-    <span>DevOps</span>
-    <span>Agilidade</span>
-    <span>Automação</span>
-    <span>CI/CD</span>
-    <span>Docker</span>
-    <span>Kubernetes</span>
-    <span>Microservices</span>
-    <span>Infraestrutura como Código</span>
-    <span>Cloud Computing</span>
-    <span>Versionamento</span>
-    <span>Git</span>
-    <span>Binary 0</span>
-    <span>Binary 1</span>
-    <span>Scripts</span>
-    <span>Monitoramento</span>
-    <span>Segurança</span>
+    <span style="--i:1;">DevOps</span>
+    <span style="--i:2;">Agilidade</span>
+    <span style="--i:3;">Automação</span>
+    <span style="--i:4;">CI/CD</span>
+    <span style="--i:5;">Docker</span>
+    <span style="--i:6;">Kubernetes</span>
+    <span style="--i:7;">Microservices</span>
+    <span style="--i:8;">Infraestrutura como Código</span>
+    <span style="--i:9;">Cloud Computing</span>
+    <span style="--i:10;">Versionamento</span>
+    <span style="--i:11;">Git</span>
+    <span style="--i:12;">Binary 0</span>
+    <span style="--i:13;">Binary 1</span>
+    <span style="--i:14;">Scripts</span>
+    <span style="--i:15;">Monitoramento</span>
+    <span style="--i:16;">Segurança</span>
 </div>
 
 <header>
