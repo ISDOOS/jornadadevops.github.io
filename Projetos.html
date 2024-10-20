@@ -9,13 +9,54 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            overflow: hidden;
+            background-color: black; /* Fundo preto */
+            color: #00ff00; /* Texto verde */
+        }
+
+        @keyframes matrix {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .matrix-code {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            height: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            pointer-events: none;
+            animation: matrix 5s linear infinite;
+        }
+
+        .matrix-code span {
+            display: inline-block;
+            font-size: 20px;
+            animation: drop 1s linear infinite;
+            opacity: 0.8;
+            color: #00ff00; /* Verde do Matrix */
+        }
+
+        @keyframes drop {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        header {
+            background-color: rgba(0, 119, 204, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
 
         .project-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1; /* Coloca o conteúdo acima do fundo */
         }
 
         .project {
@@ -24,7 +65,7 @@
             margin-bottom: 30px;
             padding: 20px;
             border-radius: 8px;
-            background-color: #e0e0e0; /* Cor de fundo */
+            background-color: rgba(224, 224, 224, 0.8); /* Fundo semi-transparente */
         }
 
         .project img {
@@ -56,14 +97,31 @@
         .project a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 119, 204, 0.8);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
+    <div class="matrix-code">
+        <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span>
+        <span>1</span><span>0</span><span>0</span><span>1</span><span>0</span>
+        <span>1</span><span>1</span><span>0</span><span>0</span><span>1</span>
+        <!-- Adicione mais caracteres se desejar -->
+    </div>
+
     <header>
         <h1>Projetos</h1>
         <nav>
-            <a href="index.html">Início</a> <!-- Link para voltar à página principal -->
+            <a href="index.html" style="color: white;">Início</a> <!-- Link para voltar à página principal -->
         </nav>
     </header>
 
