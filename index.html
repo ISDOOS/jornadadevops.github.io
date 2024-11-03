@@ -22,75 +22,55 @@
 
     <section id="projetos" class="projects-section">
         <h2>Meus Projetos</h2>
-        <div class="project-container">
+        <input type="text" id="filterInput" placeholder="Filtrar projetos..." onkeyup="filterProjects()">
+        <div class="project-container" id="projectContainer">
             <!-- Adicione seus cards de projeto aqui -->
-            <div class="project-card">
-                <img src="link-do-repositorio1.jpg" alt="Projeto 1">
+            <div class="project-card" data-category="web">
+                <img src="link-do-repositorio1.jpg" alt="Projeto 1" onclick="openModal('Projeto 1', 'Descrição do Projeto 1')">
                 <h3>Projeto 1</h3>
                 <p>Descrição do Projeto 1</p>
             </div>
-            <div class="project-card">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
+            <div class="project-card" data-category="app">
+                <img src="link-do-repositorio2.jpg" alt="Projeto 2" onclick="openModal('Projeto 2', 'Descrição do Projeto 2')">
                 <h3>Projeto 2</h3>
                 <p>Descrição do Projeto 2</p>
             </div>
-            <div class="project-card">
-                <img src="link-do-repositorio3.jpg" alt="Projeto 3">
+            <div class="project-card" data-category="web">
+                <img src="link-do-repositorio3.jpg" alt="Projeto 3" onclick="openModal('Projeto 3', 'Descrição do Projeto 3')">
                 <h3>Projeto 3</h3>
                 <p>Descrição do Projeto 3</p>
             </div>
-            <div class="project-card">
-                <img src="link-do-repositorio4.jpg" alt="Projeto 4">
-                <h3>Projeto 4</h3>
-                <p>Descrição do Projeto 4</p>
-            </div>
-            <div class="project-card">
-                <img src="link-do-repositorio5.jpg" alt="Projeto 5">
-                <h3>Projeto 5</h3>
-                <p>Descrição do Projeto 5</p>
-            </div>
-            <div class="project-card">
-                <img src="link-do-repositorio6.jpg" alt="Projeto 6">
-                <h3>Projeto 6</h3>
-                <p>Descrição do Projeto 6</p>
-            </div>
-            <div class="project-card">
-                <img src="link-do-repositorio7.jpg" alt="Projeto 7">
-                <h3>Projeto 7</h3>
-                <p>Descrição do Projeto 7</p>
-            </div>
-            <div class="project-card">
-                <img src="link-do-repositorio8.jpg" alt="Projeto 8">
-                <h3>Projeto 8</h3>
-                <p>Descrição do Projeto 8</p>
-            </div>
-            <div class="project-card">
-                <img src="link-do-repositorio9.jpg" alt="Projeto 9">
-                <h3>Projeto 9</h3>
-                <p>Descrição do Projeto 9</p>
-            </div>
+            <!-- Adicione mais projetos conforme necessário -->
         </div>
     </section>
 
-    <footer>
-    <div class="social-links">
-        <a href="https://github.com/seuusuario" target="_blank">
-            <img src="caminho/para/icon-github.png" alt="GitHub" /> GitHub
-        </a>
-        <a href="https://linkedin.com/in/seuusuario" target="_blank">
-            <img src="caminho/para/icon-linkedin.png" alt="LinkedIn" /> LinkedIn
-        </a>
-        <a href="https://instagram.com/seuusuario" target="_blank">
-            <img src="caminho/para/icon-instagram.png" alt="Instagram" /> Instagram
-        </a>
-        <a href="https://facebook.com/seuusuario" target="_blank">
-            <img src="caminho/para/icon-facebook.png" alt="Facebook" /> Facebook
-        </a>
-        <a href="https://wa.me/seunumerodetelefone" target="_blank">
-            <img src="caminho/para/icon-whatsapp.png" alt="WhatsApp" /> WhatsApp
-        </a>
+    <div id="projectModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
     </div>
-</footer>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/seuusuario" target="_blank">
+                <img src="caminho/para/icon-github.png" alt="GitHub" /> GitHub
+            </a>
+            <a href="https://linkedin.com/in/seuusuario" target="_blank">
+                <img src="caminho/para/icon-linkedin.png" alt="LinkedIn" /> LinkedIn
+            </a>
+            <a href="https://instagram.com/seuusuario" target="_blank">
+                <img src="caminho/para/icon-instagram.png" alt="Instagram" /> Instagram
+            </a>
+            <a href="https://facebook.com/seuusuario" target="_blank">
+                <img src="caminho/para/icon-facebook.png" alt="Facebook" /> Facebook
+            </a>
+            <a href="https://wa.me/seunumerodetelefone" target="_blank">
+                <img src="caminho/para/icon-whatsapp.png" alt="WhatsApp" /> WhatsApp
+            </a>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script> <!-- Link para o JS -->
 </body>
