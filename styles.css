@@ -86,6 +86,33 @@ nav ul li a:hover {
 
 footer {
     text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 20px 0; /* Espaçamento em cima e embaixo do rodapé */
+    background-color: #f8f8f8; /* Cor de fundo do rodapé, ajuste conforme necessário */
+}
+
+.social-links {
+    list-style: none; /* Remove a marcação padrão da lista */
+    padding: 0; /* Remove o padding */
+    margin: 10px 0; /* Espaçamento acima e abaixo da lista */
+    display: flex; /* Alinha os itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.social-links li {
+    margin: 0 15px; /* Espaçamento entre os links */
+}
+
+.social-links a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #6F4C3E; /* Ajuste a cor dos links para corresponder à paleta de cappuccino */
+    font-weight: bold; /* Torna o texto mais ousado, se desejado */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse, se desejado */
+}
+
+    text-align: center; /* Centraliza o conteúdo do rodapé */
 }
 
 .social-links {
