@@ -69,7 +69,7 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer; /* Indica que o card é clicável */
+    cursor: pointer; /* Adiciona um cursor de ponteiro */
 }
 
 .project-card img {
@@ -121,39 +121,38 @@ footer {
 /* Estilos do Modal */
 .modal {
     display: none; /* Oculta o modal por padrão */
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1; /* Fica acima de outros elementos */
+    position: fixed;
+    z-index: 1; /* Fica em cima de outros elementos */
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Adiciona rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo preta */
+    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
 }
 
 .modal-content {
-    background-color: #fff; /* Cor de fundo do conteúdo do modal */
-    margin: 15% auto; /* Margens para centralizar */
-    padding: 20px; /* Espaçamento interno */
-    border: 1px solid #888; /* Borda do modal */
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
     width: 80%; /* Largura do modal */
     max-width: 600px; /* Largura máxima do modal */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do modal */
 }
 
 .close {
-    color: #aaa; /* Cor do botão de fechar */
-    float: right; /* Posiciona à direita */
-    font-size: 28px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black; /* Cor ao passar o mouse */
-    text-decoration: none; /* Remove sublinhado */
-    cursor: pointer; /* Indica que é clicável */
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Responsividade */
