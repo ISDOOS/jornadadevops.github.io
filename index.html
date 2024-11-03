@@ -4,65 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jornada DevOps</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- Barra do topo -->
-    <div class="header">
-        Bem-vindo à minha Jornada DevOps
-    </div>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Bem-vindo à minha Jornada DevOps</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Seção Sobre Mim -->
-    <section class="about-section">
-        <img src="Imagens/sua_imagem.jpg" alt="Sobre mim">
-        <div class="about-text">
+    <section id="sobre" class="sobre">
+        <img src="imagens/minha-foto.jpg" alt="Foto do autor">
+        <div class="sobre-conteudo">
             <h2>Sobre Mim</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, lorem nec egestas varius, arcu libero bibendum justo, non tempor dolor quam non augue. Integer non dictum erat. Curabitur tristique ligula ac ante convallis, nec congue libero consectetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum ex ut odio fermentum, a aliquam massa efficitur. Ut quis neque a turpis varius fringilla.</p>
         </div>
     </section>
 
-    <!-- Cards de Projetos -->
-    <div class="projects-container">
-        <!-- Card 1 -->
-        <div class="project-card">
-            <a href="https://github.com/seu-usuario/repositorio1" target="_blank">
-                <img src="Imagens/projeto1.jpg" alt="Projeto 1">
-                <div class="card-content">
-                    <p class="card-title">Projeto 1</p>
-                </div>
-            </a>
+    <!-- Seção Projetos -->
+    <section id="projetos" class="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-container">
+            <!-- Card de Projeto -->
+            <div class="card">
+                <img src="imagens/projeto1.jpg" alt="Projeto 1">
+                <p>Projeto 1</p>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto2.jpg" alt="Projeto 2">
+                <p>Projeto 2</p>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto3.jpg" alt="Projeto 3">
+                <p>Projeto 3</p>
+            </div>
+            <!-- Adicione mais cards aqui, conforme necessário -->
         </div>
-        
-        <!-- Card 2 -->
-        <div class="project-card">
-            <a href="https://github.com/seu-usuario/repositorio2" target="_blank">
-                <img src="Imagens/projeto2.jpg" alt="Projeto 2">
-                <div class="card-content">
-                    <p class="card-title">Projeto 2</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="project-card">
-            <a href="https://github.com/seu-usuario/repositorio3" target="_blank">
-                <img src="Imagens/projeto3.jpg" alt="Projeto 3">
-                <div class="card-content">
-                    <p class="card-title">Projeto 3</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- Copie e cole esses cards para adicionar mais projetos -->
-    </div>
+    </section>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <footer>
         <p>© 2024 Jornada DevOps</p>
-        <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">WhatsApp</a>
+        <nav class="redes-sociais">
+            <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">WhatsApp</a>
+        </nav>
     </footer>
 
+    <!-- Script -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
