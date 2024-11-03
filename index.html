@@ -9,11 +9,19 @@
 </head>
 <body>
     <header>
-        <h1>Bem-vindo a minha jornada DevOps</h1>
+        <h1>Bem-vindo à minha jornada DevOps</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
     <section id="home" class="intro-section">
-        <img src="sua-imagem.jpg" alt="Imagem sobre mim" class="profile-image"> <!-- Insira a imagem aqui -->
+        <img src="sua-imagem.jpg" alt="Imagem sobre mim" class="profile-image">
         <div class="about-me">
             <h2>Sobre Mim</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac libero vel lacus faucibus convallis.</p>
@@ -23,74 +31,49 @@
     <section id="projetos" class="projects-section">
         <h2>Meus Projetos</h2>
         <div class="project-container">
-            <!-- Adicione seus cards de projeto aqui -->
-            <div class="project-card" onclick="openModal('Projeto 1', 'Descrição do Projeto 1', 'link-do-repositorio1.jpg')">
+            <div class="project-card" onclick="openModal('Projeto 1', 'link-do-repositorio1.jpg', 'Descrição do Projeto 1')">
                 <img src="link-do-repositorio1.jpg" alt="Projeto 1">
                 <h3>Projeto 1</h3>
                 <p>Descrição do Projeto 1</p>
             </div>
-            <div class="project-card" onclick="openModal('Projeto 2', 'Descrição do Projeto 2', 'link-do-repositorio2.jpg')">
+            <!-- Adicione mais cards conforme necessário -->
+            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
                 <img src="link-do-repositorio2.jpg" alt="Projeto 2">
                 <h3>Projeto 2</h3>
                 <p>Descrição do Projeto 2</p>
             </div>
-            <div class="project-card" onclick="openModal('Projeto 3', 'Descrição do Projeto 3', 'link-do-repositorio3.jpg')">
-                <img src="link-do-repositorio3.jpg" alt="Projeto 3">
-                <h3>Projeto 3</h3>
-                <p>Descrição do Projeto 3</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 4', 'Descrição do Projeto 4', 'link-do-repositorio4.jpg')">
-                <img src="link-do-repositorio4.jpg" alt="Projeto 4">
-                <h3>Projeto 4</h3>
-                <p>Descrição do Projeto 4</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 5', 'Descrição do Projeto 5', 'link-do-repositorio5.jpg')">
-                <img src="link-do-repositorio5.jpg" alt="Projeto 5">
-                <h3>Projeto 5</h3>
-                <p>Descrição do Projeto 5</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 6', 'Descrição do Projeto 6', 'link-do-repositorio6.jpg')">
-                <img src="link-do-repositorio6.jpg" alt="Projeto 6">
-                <h3>Projeto 6</h3>
-                <p>Descrição do Projeto 6</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 7', 'Descrição do Projeto 7', 'link-do-repositorio7.jpg')">
-                <img src="link-do-repositorio7.jpg" alt="Projeto 7">
-                <h3>Projeto 7</h3>
-                <p>Descrição do Projeto 7</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 8', 'Descrição do Projeto 8', 'link-do-repositorio8.jpg')">
-                <img src="link-do-repositorio8.jpg" alt="Projeto 8">
-                <h3>Projeto 8</h3>
-                <p>Descrição do Projeto 8</p>
-            </div>
-            <div class="project-card" onclick="openModal('Projeto 9', 'Descrição do Projeto 9', 'link-do-repositorio9.jpg')">
-                <img src="link-do-repositorio9.jpg" alt="Projeto 9">
-                <h3>Projeto 9</h3>
-                <p>Descrição do Projeto 9</p>
-            </div>
+            <!-- Continue para os outros projetos -->
         </div>
     </section>
 
     <footer>
         <div class="social-links">
             <a href="https://github.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-github.png" alt="GitHub" /> GitHub
+                <img src="caminho/para/icon-github.png" alt="GitHub"> GitHub
             </a>
             <a href="https://linkedin.com/in/seuusuario" target="_blank">
-                <img src="caminho/para/icon-linkedin.png" alt="LinkedIn" /> LinkedIn
+                <img src="caminho/para/icon-linkedin.png" alt="LinkedIn"> LinkedIn
             </a>
             <a href="https://instagram.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-instagram.png" alt="Instagram" /> Instagram
+                <img src="caminho/para/icon-instagram.png" alt="Instagram"> Instagram
             </a>
             <a href="https://facebook.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-facebook.png" alt="Facebook" /> Facebook
+                <img src="caminho/para/icon-facebook.png" alt="Facebook"> Facebook
             </a>
             <a href="https://wa.me/seunumerodetelefone" target="_blank">
-                <img src="caminho/para/icon-whatsapp.png" alt="WhatsApp" /> WhatsApp
+                <img src="caminho/para/icon-whatsapp.png" alt="WhatsApp"> WhatsApp
             </a>
         </div>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
     <script src="scripts.js"></script> <!-- Link para o JS -->
 </body>
