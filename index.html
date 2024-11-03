@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jornada DevOps</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Bem-vindo a minha Jornada DevOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Link da fonte Roboto -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header>
-        <h1>Bem-vindo à minha Jornada DevOps</h1>
+        <h1>Bem-vindo a minha Jornada DevOps</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="projetos.html">Projetos</a></li> <!-- Link para Projetos -->
             </ul>
         </nav>
     </header>
 
-    <!-- Seção Sobre Mim -->
-    <section id="sobre" class="sobre">
-        <img src="imagens/minha-foto.jpg" alt="Foto do autor">
-        <div class="sobre-conteudo">
-            <h2>Sobre Mim</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum ex ut odio fermentum, a aliquam massa efficitur. Ut quis neque a turpis varius fringilla.</p>
-        </div>
+    <section class="intro">
+        <img src="Imagens/sua-imagem.jpg" alt="Sobre Mim" class="profile-image"> <!-- Ajuste o caminho da imagem -->
+        <h2>Sobre Mim</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque.</p>
     </section>
 
-    <!-- Seção Projetos -->
-    <section id="projetos" class="projetos">
+    <section class="projects">
         <h2>Meus Projetos</h2>
-        <div class="projetos-container">
-            <!-- Card de Projeto -->
-            <div class="card">
-                <img src="imagens/projeto1.jpg" alt="Projeto 1">
-                <p>Projeto 1</p>
+        <div class="project-card-container">
+            <!-- Exemplo de Card de Projeto -->
+            <div class="project-card">
+                <img src="Imagens/imagem-repositorio.jpg" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Palavra-chave</p>
             </div>
-            <div class="card">
-                <img src="imagens/projeto2.jpg" alt="Projeto 2">
-                <p>Projeto 2</p>
-            </div>
-            <div class="card">
-                <img src="imagens/projeto3.jpg" alt="Projeto 3">
-                <p>Projeto 3</p>
-            </div>
-            <!-- Adicione mais cards aqui, conforme necessário -->
+            <!-- Repita o código acima para criar mais cards -->
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer>
-        <p>© 2024 Jornada DevOps</p>
-        <nav class="redes-sociais">
-            <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">WhatsApp</a>
-        </nav>
+        <p>© 2024 Seu Nome. Todos os direitos reservados.</p>
+        <p>
+            <a href="sua-rede-social">LinkedIn</a> | 
+            <a href="sua-rede-social">GitHub</a> | 
+            <a href="sua-rede-social">WhatsApp</a>
+        </p>
     </footer>
 
-    <!-- Script -->
-    <script src="js/scripts.js"></script>
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
 </body>
 </html>
