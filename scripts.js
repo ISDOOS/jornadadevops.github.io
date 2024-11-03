@@ -1,8 +1,10 @@
 // Função para abrir o modal
-function openModal(title, imgSrc, description) {
+function openModal(title, imgSrc, description, repoLink) {
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-image').src = imgSrc;
     document.getElementById('modal-description').innerText = description;
+    // Adiciona o link do repositório no modal
+    document.getElementById('modal-repo-link').innerHTML = `<a href="${repoLink}" target="_blank">Ver Repositório</a>`;
     document.getElementById('modal').style.display = 'block';
 }
 
@@ -14,7 +16,7 @@ function closeModal() {
 // Fecha o modal quando o usuário clica fora do conteúdo do modal
 window.onclick = function(event) {
     const modal = document.getElementById('modal');
-    if (event.target === modal) {
+    if (event.target == modal) {
         closeModal();
     }
 }
@@ -36,16 +38,16 @@ document.getElementById('toggle-list').addEventListener('click', function() {
 window.onclick = function(event) {
     const list = document.getElementById('page-list');
     const overlay = document.getElementById('overlay');
-    if (event.target === overlay) {
+    if (event.target == overlay) {
         list.style.display = 'none';
         overlay.style.display = 'none'; // Ocultar o fundo escurecido
     }
 }
 
-// Adiciona evento ao botão de fechar
+// Fecha a lista quando o botão de fechar é clicado
 document.getElementById('close-list').addEventListener('click', function() {
     var list = document.getElementById('page-list');
     var overlay = document.getElementById('overlay');
-    list.style.display = 'none'; // Oculta a lista
-    overlay.style.display = 'none'; // Oculta o fundo escurecido
+    list.style.display = 'none';
+    overlay.style.display = 'none'; // Ocultar o fundo escurecido
 });
