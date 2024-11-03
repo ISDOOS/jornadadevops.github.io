@@ -61,6 +61,33 @@ header::after {
     margin-top: 20px; /* Margem superior para espaçamento */
 }
 
+/* Estilos do botão */
+#toggle-list {
+    margin-left: 20px; /* Espaçamento em relação ao título */
+    padding: 10px;
+    background-color: #7d5b3e; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s; /* Transição suave para fundo */
+}
+
+#toggle-list:hover {
+    background-color: #6F4C3E; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos da lista */
+#page-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin-top: 10px;
+    background-color: #e2c8b4; /* Cor de fundo da lista */
+    position: absolute; /* Para flutuar sobre o cabeçalho */
+    left: 0; /* Posicionar à esquerda do cabeçalho */
+    z-index: 10; /* Para garantir que fique sobre outros elementos */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
