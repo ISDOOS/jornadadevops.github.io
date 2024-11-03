@@ -166,10 +166,10 @@ nav ul li a:hover {
 }
 
 .profile-image {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 20px;
+    width: 376px; /* Largura da imagem */
+    height: 387px; /* Altura da imagem */
+    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
+    border-radius: 10px; /* (opcional) Adiciona bordas arredondadas à imagem */
 }
 
 .about-me {
