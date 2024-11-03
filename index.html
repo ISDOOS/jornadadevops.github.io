@@ -13,14 +13,16 @@
         <p>Explorando projetos, aprendizados e desafios na área de DevOps.</p>
         <button id="toggle-list">Páginas</button>
         <div id="overlay"></div> <!-- Div para o fundo escurecido -->
-        <ul id="page-list" class="card">
+        <div id="page-list" class="card"> <!-- Mudei para um div em vez de ul -->
             <button id="close-list" style="background: none; border: none; color: #6F4C3E; font-size: 20px; cursor: pointer; position: absolute; top: 10px; right: 10px;">✖</button> <!-- Botão de fechar -->
-            <li><a href="#">Página 1 - Em construção</a></li>
-            <li><a href="#">Página 2 - Em construção</a></li>
-            <li><a href="#">Página 3 - Em construção</a></li>
-            <li><a href="#">Página 4 - Em construção</a></li>
-            <li><a href="#">Página 5 - Em construção</a></li>
-        </ul>
+            <ul> <!-- Coloquei a lista aqui dentro -->
+                <li><a href="#">Página 1 - Em construção</a></li>
+                <li><a href="#">Página 2 - Em construção</a></li>
+                <li><a href="#">Página 3 - Em construção</a></li>
+                <li><a href="#">Página 4 - Em construção</a></li>
+                <li><a href="#">Página 5 - Em construção</a></li>
+            </ul>
+        </div>
     </header>
 
     <section id="home" class="intro-section">
