@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jornada DevOps</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada DevOps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
         <h1>Bem-vindo à minha jornada DevOps</h1>
@@ -34,48 +34,24 @@
     </section>
 
     <section id="projetos" class="projects-section">
-    <h2>Meus Projetos</h2>
-    <div class="project-container">
-        <div class="project-card" onclick="openModal('Ransomware com Python', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg', 'Estudo de criptografias usando Python.', 'https://github.com/ISDOOS/Rasomware_com_Python')">
-            <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg" alt="Ransomware com Python">
-            <h3>Ransomware com Python</h3>
-            <p>Estudo de criptografias usando Python.</p>
+        <h2>Meus Projetos</h2>
+        <div class="project-container">
+            <div class="project-card" onclick="openModal('Ransomware com Python', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg', 'Estudo de criptografias usando Python.', 'https://github.com/seu-usuario/nome-do-repositorio1')">
+                <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg" alt="Ransomware com Python">
+                <h3>Ransomware com Python</h3>
+                <p>Estudo de criptografias usando Python.</p>
+            </div>
+            <!-- *****borda para cards*****... -->
         </div>
-        <div class="project-card" onclick="openModal('Gerador de QR Code', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio2/main/imagem-do-projeto.jpg', 'Gerador de QR Codes em JavaScript.', 'https://github.com/seu-usuario/nome-do-repositorio2')">
-            <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio2/main/imagem-do-projeto.jpg" alt="Gerador de QR Code">
-            <h3>Gerador de QR Code</h3>
-            <p>Gerador de QR Codes em JavaScript.</p>
-        </div>
-        <div class="project-card" onclick="openModal('Web Scraper', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio3/main/imagem-do-projeto.jpg', 'Ferramenta de Web Scraping em Python.', 'https://github.com/seu-usuario/nome-do-repositorio3')">
-            <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio3/main/imagem-do-projeto.jpg" alt="Web Scraper">
-            <h3>Web Scraper</h3>
-            <p>Ferramenta de Web Scraping em Python.</p>
-        </div>
-        <div class="project-card" onclick="openModal('Aplicativo de Notas', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio4/main/imagem-do-projeto.jpg', 'Aplicativo para gerenciamento de notas.', 'https://github.com/seu-usuario/nome-do-repositorio4')">
-            <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio4/main/imagem-do-projeto.jpg" alt="Aplicativo de Notas">
-            <h3>Aplicativo de Notas</h3>
-            <p>Aplicativo para gerenciamento de notas.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <div class="social-links">
-            <a href="https://github.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-github.png" alt="GitHub"> GitHub
-            </a>
-            <a href="https://linkedin.com/in/seuusuario" target="_blank">
-                <img src="caminho/para/icon-linkedin.png" alt="LinkedIn"> LinkedIn
-            </a>
-            <a href="https://instagram.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-instagram.png" alt="Instagram"> Instagram
-            </a>
-            <a href="https://facebook.com/seuusuario" target="_blank">
-                <img src="caminho/para/icon-facebook.png" alt="Facebook"> Facebook
-            </a>
-            <a href="https://wa.me/seunumerodetelefone" target="_blank">
-                <img src="caminho/para/icon-whatsapp.png" alt="WhatsApp"> WhatsApp
-            </a>
+            <a href="https://github.com/seuusuario" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/seuusuario" target="_blank">Instagram</a>
+            <a href="https://facebook.com/seuusuario" target="_blank">Facebook</a>
+            <a href="https://wa.me/seunumerodetelefone" target="_blank">WhatsApp</a>
         </div>
     </footer>
 
@@ -85,9 +61,10 @@
             <h2 id="modal-title"></h2>
             <img id="modal-image" src="" alt="">
             <p id="modal-description"></p>
+            <a id="modal-repo-link" href="#" target="_blank">Ver no GitHub</a> 
         </div>
     </div>
 
-    <script src="scripts.js"></script> <!-- Link para o JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
