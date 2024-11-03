@@ -85,54 +85,25 @@ nav ul li a:hover {
 }
 
 footer {
-    text-align: center; /* Centraliza o conteúdo do rodapé */
-    padding: 20px 0; /* Espaçamento em cima e embaixo do rodapé */
-    background-color: #f8f8f8; /* Cor de fundo do rodapé, ajuste conforme necessário */
+    background-color: #6F4C3E; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno */
 }
 
 .social-links {
-    list-style: none; /* Remove a marcação padrão da lista */
-    padding: 0; /* Remove o padding */
-    margin: 10px 0; /* Espaçamento acima e abaixo da lista */
-    display: flex; /* Alinha os itens em linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-}
-
-.social-links li {
-    margin: 0 15px; /* Espaçamento entre os links */
+    display: flex; /* Utiliza flexbox para alinhar os links */
+    justify-content: center; /* Centraliza os itens */
+    margin-top: 10px; /* Espaçamento acima dos links */
 }
 
 .social-links a {
+    margin: 0 10px; /* Espaçamento lateral entre os links */
     text-decoration: none; /* Remove o sublinhado */
-    color: #6F4C3E; /* Ajuste a cor dos links para corresponder à paleta de cappuccino */
-    font-weight: bold; /* Torna o texto mais ousado, se desejado */
+    color: white; /* Cor dos links */
+    font-weight: bold; /* Deixa os links em negrito */
 }
 
 .social-links a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse, se desejado */
-}
-
-    text-align: center; /* Centraliza o conteúdo do rodapé */
-}
-
-.social-links {
-    list-style: none; /* Remove a marcação padrão da lista */
-    padding: 0; /* Remove o padding */
-    margin: 10px 0; /* Espaçamento acima e abaixo da lista */
-    display: flex; /* Alinha os itens em linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-}
-
-.social-links li {
-    margin: 0 15px; /* Espaçamento entre os links */
-}
-
-.social-links a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #333; /* Muda a cor dos links para uma cor mais escura (ajuste conforme necessário) */
-    font-weight: bold; /* Torna o texto mais ousado, se desejado */
-}
-
-.social-links a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse, se desejado */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
