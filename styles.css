@@ -85,25 +85,39 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #f4f4f4; /* Altere a cor do fundo do rodapé para combinar com o resto da página */
-    color: #6F4C3E; /* Cor do texto no rodapé */
+    background-color: #6F4C3E; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto no rodapé */
     text-align: center; /* Centraliza o texto */
     padding: 20px 0; /* Espaçamento interno */
 }
 
 .social-links {
-    display: flex: 1; /* Utiliza flexbox para alinhar os links */
+    display: flex; /* Utiliza flexbox para alinhar os links */
     justify-content: center; /* Centraliza os itens */
     margin-top: 10px; /* Espaçamento acima dos links */
 }
 
 .social-links a {
+    display: flex; /* Permite alinhar ícone e texto */
+    align-items: center; /* Alinha verticalmente os itens */
     margin: 0 10px; /* Espaçamento lateral entre os links */
     text-decoration: none; /* Remove o sublinhado */
-    color: #6F4C3E; /* Cor dos links, compatível com a paleta */
+    color: white; /* Cor dos links */
     font-weight: bold; /* Deixa os links em negrito */
+}
+
+.social-links img {
+    width: 25px; /* Ajuste o tamanho do ícone */
+    height: auto; /* Mantém a proporção do ícone */
+    margin-right: 5px; /* Espaçamento entre ícone e texto */
+    transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
 }
 
 .social-links a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
