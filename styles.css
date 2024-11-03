@@ -85,8 +85,8 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #6F4C3E; /* Cor de fundo do rodapé */
-    color: white; /* Cor do texto no rodapé */
+    background-color: #f4f4f4; /* Altere a cor do fundo do rodapé para combinar com o resto da página */
+    color: #6F4C3E; /* Cor do texto no rodapé */
     text-align: center; /* Centraliza o texto */
     padding: 20px 0; /* Espaçamento interno */
 }
@@ -100,7 +100,7 @@ footer {
 .social-links a {
     margin: 0 10px; /* Espaçamento lateral entre os links */
     text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Cor dos links */
+    color: #6F4C3E; /* Cor dos links, compatível com a paleta */
     font-weight: bold; /* Deixa os links em negrito */
 }
 
