@@ -18,3 +18,13 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+// Controle para mostrar/ocultar a lista de páginas
+document.getElementById('toggle-list').addEventListener('click', function() {
+    var list = document.getElementById('page-list');
+    if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+    } else {
+        list.style.display = 'none';
+    }
+});
