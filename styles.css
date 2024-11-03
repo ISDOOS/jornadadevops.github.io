@@ -80,12 +80,30 @@ header::after {
 /* Estilos da lista */
 #page-list {
     list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0;
-    margin-top: 10px;
+    padding: 10px; /* Adiciona espaço interno */
+    margin-top: 10px; /* Margem superior */
     background-color: #e2c8b4; /* Cor de fundo da lista */
     position: absolute; /* Para flutuar sobre o cabeçalho */
-    left: 0; /* Posicionar à esquerda do cabeçalho */
+    left: 50%; /* Centraliza a lista */
+    transform: translateX(-50%); /* Ajusta a lista para centralizar corretamente */
     z-index: 10; /* Para garantir que fique sobre outros elementos */
+    border-radius: 5px; /* Bordas arredondadas para um visual mais suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a lista */
+    display: none; /* Inicialmente invisível */
+}
+
+/* Estilos dos links da lista */
+#page-list a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #6F4C3E; /* Cor do texto dos links */
+    display: block; /* Faz com que cada link ocupe uma linha */
+    padding: 8px; /* Espaçamento interno para os links */
+    transition: background 0.3s, color 0.3s; /* Transição suave para fundo e cor */
+}
+
+#page-list a:hover {
+    background-color: #d1b59d; /* Cor de fundo ao passar o mouse */
+    color: #4F3C31; /* Mudar a cor do texto ao passar o mouse */
 }
 
 nav ul {
