@@ -1,33 +1,20 @@
-function filterProjects() {
-    const input = document.getElementById('filterInput');
-    const filter = input.value.toLowerCase();
-    const projectContainer = document.getElementById('projectContainer');
-    const projects = projectContainer.getElementsByClassName('project-card');
-
-    for (let i = 0; i < projects.length; i++) {
-        const projectTitle = projects[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-        if (projectTitle.includes(filter)) {
-            projects[i].style.display = ""; // Exibe o projeto
-        } else {
-            projects[i].style.display = "none"; // Oculta o projeto
-        }
-    }
+// Função para abrir o modal
+function openModal(title, imgSrc, description) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-image').src = imgSrc;
+    document.getElementById('modal-description').innerText = description;
+    document.getElementById('modal').style.display = 'block';
 }
 
-function openModal(title, description) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalDescription').innerText = description;
-    document.getElementById('projectModal').style.display = 'block';
-}
-
+// Função para fechar o modal
 function closeModal() {
-    document.getElementById('projectModal').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 }
 
-// Fecha o modal ao clicar fora dele
+// Fecha o modal quando o usuário clica fora do conteúdo do modal
 window.onclick = function(event) {
-    const modal = document.getElementById('projectModal');
-    if (event.target === modal) {
+    const modal = document.getElementById('modal');
+    if (event.target == modal) {
         closeModal();
     }
 }
