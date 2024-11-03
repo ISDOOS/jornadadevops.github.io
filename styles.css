@@ -6,29 +6,43 @@ body {
 }
 
 header {
-    background-color: #7d5b3e; /* Cor de fundo do cabeçalho */
+    background: linear-gradient(to right, #7d5b3e, #6F4C3E); /* Gradiente de fundo */
     color: white;
-    padding: 20px;
+    padding: 15px 20px; /* Ajusta o espaçamento interno */
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove a margem */
+    display: flex; /* Alinha os itens na horizontal */
+    justify-content: center; /* Centraliza a lista */
+    flex-wrap: wrap; /* Permite que os itens quebrem em múltiplas linhas se necessário */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Espaçamento lateral */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Transição suave */
+    padding: 10px 15px; /* Aumenta o espaçamento interno */
+    border-radius: 5px; /* Arredonda os cantos */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo sutil ao hover */
+    transform: translateY(-2px); /* Levanta o link ao passar o mouse */
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.4); /* Destaca a página ativa */
+    border-radius: 5px; /* Mantém o arredondamento */
 }
 
 .intro-section {
