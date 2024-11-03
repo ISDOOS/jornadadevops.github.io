@@ -9,11 +9,36 @@ body {
 }
 
 header {
-    background-color: #7d5b3e;
+    background: linear-gradient(135deg, #6F4C3E, #7d5b3e); /* Gradiente de cor */
     color: white;
-    padding: 20px;
+    padding: 40px; /* Mais espaço para um layout mais aberto */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    position: relative; /* Para posicionar elementos dentro */
+    overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse o limite */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamanho da fonte maior para destaque */
+    margin: 0;
+    letter-spacing: 2px; /* Espaçamento entre letras para um visual mais elegante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para profundidade */
+}
+
+/* Efeito de animação para o cabeçalho */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: fadeIn 0.5s ease; /* Animação ao carregar */
 }
 
 nav ul {
