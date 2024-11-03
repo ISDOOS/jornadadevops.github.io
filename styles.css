@@ -92,7 +92,7 @@ footer {
 }
 
 .social-links {
-    display: flex; /* Utiliza flexbox para alinhar os links */
+    display: flex: 1; /* Utiliza flexbox para alinhar os links */
     justify-content: center; /* Centraliza os itens */
     margin-top: 10px; /* Espaçamento acima dos links */
 }
