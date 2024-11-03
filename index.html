@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jornada DevOps</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+        <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
 <body>
@@ -12,10 +12,10 @@
         <h1>Bem-vindo à minha jornada DevOps</h1>
         <p>Explorando projetos, aprendizados e desafios na área de DevOps.</p>
         <button id="toggle-list">Páginas</button>
-        <div id="overlay"></div> <!-- Div para o fundo escurecido -->
-        <div id="page-list" class="card"> <!-- Mudei para um div em vez de ul -->
+        <div id="overlay"></div> 
+        <div id="page-list" class="card"> 
             <button id="close-list" style="background: none; border: none; color: #6F4C3E; font-size: 20px; cursor: pointer; position: absolute; top: 10px; right: 10px;">✖</button> <!-- Botão de fechar -->
-            <ul> <!-- Coloquei a lista aqui dentro -->
+            <ul>
                 <li><a href="#">Página 1 - Em construção</a></li>
                 <li><a href="#">Página 2 - Em construção</a></li>
                 <li><a href="#">Página 3 - Em construção</a></li>
@@ -33,46 +33,30 @@
         </div>
     </section>
 
-
     <section id="projetos" class="projects-section">
         <h2>Meus Projetos</h2>
         <div class="project-container">
-            <div class="project-card" onclick="openModal('Projeto 1', 'link-do-repositorio1.jpg', 'Descrição do Projeto 1')">
-                <img src="link-do-repositorio1.jpg" alt="Projeto 1">
-                <h3>Rasomware com Python</h3>
+            <div class="project-card" onclick="openModal('Ransomware com Python', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg', 'Estudo de criptografias', 'https://github.com/seu-usuario/nome-do-repositorio1')">
+                <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg" alt="Projeto 1">
+                <h3>Ransomware com Python</h3>
                 <p>Estudo de criptografias</p>
             </div>
-            <!-- Adicione mais cards conforme necessário -->
-            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
-                <h3>Projeto 2</h3>
-                <p>Descrição do Projeto 2</p>
+            <!--******************* Corte para mais cards************* -->
+            <div class="project-card" onclick="openModal('Projeto 2', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio2/main/imagem-do-projeto.jpg', 'Descrição do Projeto 2', 'https://github.com/seu-usuario/nome-do-repositorio2')">
+                <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio2/main/imagem-do-projeto.jpg" alt="Projeto 2">
+                <h3>Outro Projeto</h3>
+                <p>Descrição do projeto.</p>
             </div>
-
-            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
-                <h3>Projeto 3</h3>
-                <p>Descrição do Projeto 2</p>
+             <div class="project-card" onclick="openModal('3', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg', 'Estudo de criptografias', 'https://github.com/seu-usuario/nome-do-repositorio1')">
+                <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg" alt="Projeto 1">
+                <h3>Ransomware com Python</h3>
+                <p>Estudo de criptografias</p>
             </div>
-
-            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
-                <h3>Projeto 4</h3>
-                <p>Descrição do Projeto 2</p>
+             <div class="project-card" onclick="openModal('4', 'https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg', 'Estudo de criptografias', 'https://github.com/seu-usuario/nome-do-repositorio1')">
+                <img src="https://raw.githubusercontent.com/seu-usuario/nome-do-repositorio1/main/imagem-do-projeto.jpg" alt="Projeto 1">
+                <h3>Ransomware com Python</h3>
+                <p>Estudo de criptografias</p>
             </div>
-
-            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
-                <h3>Projeto 5</h3>
-                <p>Descrição do Projeto 2</p>
-            </div>
-
-            <div class="project-card" onclick="openModal('Projeto 2', 'link-do-repositorio2.jpg', 'Descrição do Projeto 2')">
-                <img src="link-do-repositorio2.jpg" alt="Projeto 2">
-                <h3>Projeto 6</h3>
-                <p>Descrição do Projeto 2</p>
-            </div>
-            <!-- Continue para os outros projetos -->
         </div>
     </section>
 
