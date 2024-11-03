@@ -117,7 +117,7 @@ header::after {
     color: #4F3C31; /* Mudar a cor do texto ao passar o mouse */
 }
 
-/* Adiciona um fundo escurecido para o overlay */
+/* Estilos do Overlay */
 #overlay {
     position: fixed; /* Fixa na tela */
     top: 0;
@@ -129,15 +129,42 @@ header::after {
     display: none; /* Inicialmente oculto */
 }
 
-#close-list {
-    background: none; /* Remove fundo */
-    border: none; /* Remove borda */
-    color: #6F4C3E; /* Cor do texto */
-    font-size: 20px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor em forma de mão */
-    position: absolute; /* Posiciona no canto do card */
-    top: 10px; /* Margem do topo */
-    right: 10px; /* Margem da direita */
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1; /* Fica em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Cor de fundo do conteúdo do modal */
+    margin: 10% auto; /* Margem superior e centraliza horizontalmente */
+    padding: 20px;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+    width: 90%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima do modal */
+    transition: transform 0.3s ease; /* Transição suave para transformação */
+}
+
+.close {
+    color: #6F4C3E; /* Cor do botão fechar */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.close:hover,
+.close:focus {
+    color: #4F3C31; /* Cor ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 nav ul {
@@ -224,70 +251,70 @@ footer {
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .social-links a {
     margin: 0 10px;
-    text-decoration: none;
     color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .social-links a:hover {
     text-decoration: underline;
-    color: #f4f4f4; /* Ou qualquer cor que você preferir */
 }
 
-/* Estilos do Modal */
-.modal {
-    display: none; /* Oculta o modal por padrão */
-    position: fixed;
-    z-index: 1; /* Fica em cima de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Permite rolagem se necessário */
-    background-color: rgb(0,0,0); /* Cor de fundo preta */
-    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+/* Estilos para a seção "Sobre Mim" */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centraliza o modal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Largura do modal */
-    max-width: 600px; /* Largura máxima do modal */
+.about-me img {
+    border-radius: 50%; /* Deixa a imagem circular */
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.about-me p {
+    max-width: 600px; /* Largura máxima do texto */
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+/* Transição suave para o modal */
+.modal.fade-in {
+    display: block;
+    animation: fadeIn 0.3s forwards; /* Animação de aparecer */
 }
 
-/* Responsividade */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .project-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para duas colunas */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Diminui o tamanho da fonte no cabeçalho */
     }
 }
 
 @media (max-width: 480px) {
     .project-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Diminui ainda mais o tamanho da fonte */
     }
 }
