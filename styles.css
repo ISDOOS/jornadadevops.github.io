@@ -80,16 +80,15 @@ header::after {
 /* Estilos da lista */
 #page-list {
     list-style-type: none; /* Remove os marcadores da lista */
-    padding: 10px; /* Adiciona espaço interno */
-    margin-top: 10px; /* Margem superior */
+    padding: 0;
+    margin-top: 10px;
     background-color: #e2c8b4; /* Cor de fundo da lista */
     position: absolute; /* Para flutuar sobre o cabeçalho */
-    left: 50%; /* Centraliza a lista */
-    transform: translateX(-50%); /* Ajusta a lista para centralizar corretamente */
-    z-index: 10; /* Para garantir que fique sobre outros elementos */
-    border-radius: 5px; /* Bordas arredondadas para um visual mais suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a lista */
-    display: none; /* Inicialmente invisível */
+    left: 50%; /* Posicionar à esquerda do cabeçalho */
+    transform: translateX(-50%); /* Centralizar a lista em relação ao botão */
+    z-index: 100; /* Aumenta o z-index para que fique sobre outros elementos */
+    border-radius: 5px; /* Adiciona borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
 }
 
 /* Estilos dos links da lista */
