@@ -208,20 +208,17 @@ nav ul li a:hover {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
 .project-card {
-    background-color: #e2c8b4;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer; /* Adiciona um cursor de ponteiro */
-}
+    flex: 1 1 calc(33.33% - 20px); /* Tamanho dos cards (3 por linha) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos cards */
+    border-radius: 10px; /* Arredondar bordas dos cards */
+    overflow: hidden; /* Para evitar que a imagem ultrapasse os limites */
 
 .project-card img {
     width: 100%;
