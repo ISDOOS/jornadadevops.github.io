@@ -81,14 +81,26 @@ header::after {
 #page-list {
     list-style-type: none; /* Remove os marcadores da lista */
     padding: 0;
-    margin-top: 10px;
-    background-color: #e2c8b4; /* Cor de fundo da lista */
-    position: absolute; /* Para flutuar sobre o cabeçalho */
-    left: 50%; /* Posicionar à esquerda do cabeçalho */
-    transform: translateX(-50%); /* Centralizar a lista em relação ao botão */
+    background-color: rgba(226, 200, 180, 0.95); /* Cor de fundo da lista com opacidade */
+    position: fixed; /* Fixa na tela */
+    top: 0; /* Fica no topo da página */
+    left: 0; /* Começa na esquerda */
+    right: 0; /* Vai até a direita */
+    bottom: 0; /* Vai até o fundo */
     z-index: 100; /* Aumenta o z-index para que fique sobre outros elementos */
-    border-radius: 5px; /* Adiciona borda arredondada */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
+    display: none; /* Inicialmente oculto */
+    justify-content: center; /* Centraliza os itens na tela */
+    align-items: center; /* Alinha verticalmente */
+    transition: opacity 0.3s ease; /* Transição suave para opacidade */
+}
+
+/* Novo estilo para o card da lista */
+.card {
+    background-color: #e2c8b4; /* Cor de fundo do card */
+    border-radius: 10px; /* Adiciona borda arredondada ao card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+    padding: 20px; /* Espaçamento interno do card */
+    text-align: center; /* Centraliza o texto dentro do card */
 }
 
 /* Estilos dos links da lista */
@@ -96,13 +108,25 @@ header::after {
     text-decoration: none; /* Remove o sublinhado padrão */
     color: #6F4C3E; /* Cor do texto dos links */
     display: block; /* Faz com que cada link ocupe uma linha */
-    padding: 8px; /* Espaçamento interno para os links */
+    padding: 10px; /* Espaçamento interno para os links */
     transition: background 0.3s, color 0.3s; /* Transição suave para fundo e cor */
 }
 
 #page-list a:hover {
     background-color: #d1b59d; /* Cor de fundo ao passar o mouse */
     color: #4F3C31; /* Mudar a cor do texto ao passar o mouse */
+}
+
+/* Adiciona um fundo escurecido para o overlay */
+#overlay {
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
+    z-index: 90; /* Fica abaixo da lista */
+    display: none; /* Inicialmente oculto */
 }
 
 nav ul {
