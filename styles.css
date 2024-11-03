@@ -69,6 +69,7 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Indica que o card é clicável */
 }
 
 .project-card img {
@@ -115,6 +116,44 @@ footer {
 .social-links a:hover {
     text-decoration: underline;
     color: #f4f4f4; /* Ou qualquer cor que você preferir */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+}
+
+.modal-content {
+    background-color: #fff; /* Cor de fundo do conteúdo do modal */
+    margin: 15% auto; /* Margens para centralizar */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #888; /* Borda do modal */
+    width: 80%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima do modal */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do modal */
+}
+
+.close {
+    color: #aaa; /* Cor do botão de fechar */
+    float: right; /* Posiciona à direita */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cor ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Indica que é clicável */
 }
 
 /* Responsividade */
