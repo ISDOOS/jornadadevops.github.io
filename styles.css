@@ -1,20 +1,19 @@
-/* Definindo a fonte padrão */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5dc; /* Cor cappuccino clara */
+    background-color: #f4f4f4; /* Cor de fundo */
 }
 
 header {
-    background-color: #c2b280; /* Cor cappuccino */
+    background-color: #7d5b3e; /* Cor de fundo do cabeçalho */
     color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -23,55 +22,71 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.intro {
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.intro-section {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 .profile-image {
-    width: 150px; /* Tamanho da imagem */
+    width: 200px;
     height: auto;
-    border-radius: 50%; /* Imagem redonda */
+    border-radius: 50%;
     margin-right: 20px;
 }
 
-.projects {
-    padding: 20px;
+.about-me {
+    max-width: 600px;
 }
 
-.project-card-container {
+.projects-section {
+    padding: 40px;
+}
+
+.project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .project-card {
-    background-color: #d9d3c4; /* Cor cappuccino clara */
-    border-radius: 10px;
-    padding: 15px;
+    background-color: #e2c8b4; /* Cor de fundo dos cards */
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
 }
 
-.project-card:hover {
-    transform: scale(1.05); /* Efeito de hover */
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.project-card img {
-    max-width: 100%; /* Ajustar imagem ao card */
-    height: auto;
+.project-card h3 {
+    margin: 10px 0 5px;
+}
+
+.project-card p {
+    margin: 0;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #c2b280; /* Cor cappuccino */
+    background-color: #7d5b3e; /* Cor de fundo do rodapé */
     color: white;
 }
