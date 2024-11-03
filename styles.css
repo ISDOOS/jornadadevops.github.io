@@ -2,67 +2,43 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Cor de fundo */
-    background: linear-gradient(to bottom, #f4f4f4, #eaeaea); /* Gradiente suave */
-    min-height: 100vh; /* Ocupa pelo menos a altura total da viewport */
-    display: flex; /* Permite o uso de flexbox, se necessário */
-    flex-direction: column; /* Organiza os itens em coluna */
-}
-
-a {
-    color: #7d5b3e; /* Cor dos links, harmonizando com o cabeçalho */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    transition: color 0.3s ease; /* Transição suave para a cor do link */
-}
-
-a:hover {
-    color: #6F4C3E; /* Muda a cor ao passar o mouse */
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: linear-gradient(to right, #7d5b3e, #6F4C3E); /* Gradiente de fundo */
+    background-color: #7d5b3e;
     color: white;
-    padding: 15px 20px; /* Ajusta o espaçamento interno */
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove a margem */
-    display: flex; /* Alinha os itens na horizontal */
-    justify-content: center; /* Centraliza a lista */
-    flex-wrap: wrap; /* Permite que os itens quebrem em múltiplas linhas se necessário */
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaçamento lateral */
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Transição suave */
-    padding: 10px 15px; /* Aumenta o espaçamento interno */
-    border-radius: 5px; /* Arredonda os cantos */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo sutil ao hover */
-    transform: translateY(-2px); /* Levanta o link ao passar o mouse */
-}
-
-nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.4); /* Destaca a página ativa */
-    border-radius: 5px; /* Mantém o arredondamento */
+    text-decoration: underline;
 }
 
 .intro-section {
     display: flex;
     align-items: center;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 .profile-image {
@@ -87,11 +63,12 @@ nav ul li a.active {
 }
 
 .project-card {
-    background-color: #e2c8b4; /* Cor de fundo dos cards */
+    background-color: #e2c8b4;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -102,10 +79,12 @@ nav ul li a.active {
 
 .project-card h3 {
     margin: 10px 0 5px;
+    font-weight: 700; /* Mais forte para destacar */
 }
 
 .project-card p {
     margin: 0;
+    font-weight: 400; /* Normal para o texto */
 }
 
 .project-card:hover {
@@ -113,39 +92,40 @@ nav ul li a.active {
 }
 
 footer {
-    background-color: #6F4C3E; /* Cor de fundo do rodapé */
-    color: white; /* Cor do texto no rodapé */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 0; /* Espaçamento interno */
+    background-color: #6F4C3E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .social-links {
-    display: flex; /* Utiliza flexbox para alinhar os links */
-    justify-content: center; /* Centraliza os itens */
-    margin-top: 10px; /* Espaçamento acima dos links */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .social-links a {
-    display: flex; /* Permite alinhar ícone e texto */
-    align-items: center; /* Alinha verticalmente os itens */
-    margin: 0 10px; /* Espaçamento lateral entre os links */
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Cor dos links */
-    font-weight: bold; /* Deixa os links em negrito */
-}
-
-.social-links img {
-    width: 25px; /* Ajuste o tamanho do ícone */
-    height: auto; /* Mantém a proporção do ícone */
-    margin-right: 5px; /* Espaçamento entre ícone e texto */
-    transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
-}
-
-.social-links a:hover img {
-    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
+    color: #f4f4f4; /* Ou qualquer cor que você preferir */
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
