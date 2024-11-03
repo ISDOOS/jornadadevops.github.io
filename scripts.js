@@ -41,3 +41,12 @@ window.onclick = function(event) {
         overlay.style.display = 'none'; // Ocultar o fundo escurecido
     }
 }
+
+// Adicione isso ao seu arquivo script.js
+document.getElementById('close-list').addEventListener('click', function() {
+    var list = document.getElementById('page-list');
+    var overlay = document.getElementById('overlay');
+    list.style.display = 'none';
+    overlay.style.display = 'none'; // Ocultar o fundo escurecido
+});
+
