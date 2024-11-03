@@ -219,6 +219,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos cards */
     border-radius: 10px; /* Arredondar bordas dos cards */
     overflow: hidden; /* Para evitar que a imagem ultrapasse os limites */
+    max-width: calc(33.33% - 20px); /* Garante que o card não exceda a largura */
+    display: flex; /* Adiciona flexbox dentro do card para alinhamento */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
 
 .project-card img {
     width: 100%;
@@ -238,8 +243,8 @@ nav ul li a:hover {
 
 .project-card:hover {
     transform: scale(1.05);
+    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de hover */
 }
-
 footer {
     background-color: #6F4C3E;
     color: white;
