@@ -129,6 +129,17 @@ header::after {
     display: none; /* Inicialmente oculto */
 }
 
+#close-list {
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    color: #6F4C3E; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão */
+    position: absolute; /* Posiciona no canto do card */
+    top: 10px; /* Margem do topo */
+    right: 10px; /* Margem da direita */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
