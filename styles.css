@@ -16,6 +16,11 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
     position: relative; /* Para posicionar elementos dentro */
     overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse o limite */
+    transition: background 0.5s; /* Transição suave de fundo */
+}
+
+header:hover {
+    background: linear-gradient(135deg, #7d5b3e, #6F4C3E); /* Mudança de gradiente ao passar o mouse */
 }
 
 header h1 {
@@ -23,6 +28,12 @@ header h1 {
     margin: 0;
     letter-spacing: 2px; /* Espaçamento entre letras para um visual mais elegante */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para profundidade */
+    transition: transform 0.3s, color 0.3s; /* Transição suave para transformação e cor */
+}
+
+header h1:hover {
+    transform: scale(1.05); /* Efeito de pulsar no título ao passar o mouse */
+    color: #f4f4f4; /* Mudar a cor do texto ao passar o mouse */
 }
 
 /* Efeito de animação para o cabeçalho */
@@ -39,6 +50,15 @@ header h1 {
 
 header {
     animation: fadeIn 0.5s ease; /* Animação ao carregar */
+}
+
+/* Linha de separação abaixo do cabeçalho */
+header::after {
+    content: '';
+    display: block;
+    height: 3px; /* Altura da linha */
+    background-color: #eaeaea; /* Cor da linha */
+    margin-top: 20px; /* Margem superior para espaçamento */
 }
 
 nav ul {
