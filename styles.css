@@ -1,102 +1,77 @@
-/* Estilos Gerais */
+/* Definindo a fonte padrão */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    padding: 0;
+    background-color: #f5f5dc; /* Cor cappuccino clara */
 }
 
-/* Cabeçalho */
 header {
-    background-color: #3e2723;
-    color: #fff;
-    padding: 1em;
+    background-color: #c2b280; /* Cor cappuccino */
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Seção Sobre Mim */
-.sobre {
+.intro {
     display: flex;
-    padding: 2em;
     align-items: center;
-    background-color: #efebe9;
+    padding: 20px;
 }
 
-.sobre img {
-    max-width: 200px;
-    border-radius: 50%;
-    margin-right: 2em;
+.profile-image {
+    width: 150px; /* Tamanho da imagem */
+    height: auto;
+    border-radius: 50%; /* Imagem redonda */
+    margin-right: 20px;
 }
 
-.sobre h2 {
-    font-size: 2em;
-    margin-top: 0;
+.projects {
+    padding: 20px;
 }
 
-/* Seção Projetos */
-.projetos {
-    padding: 2em;
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #d9d3c4; /* Cor cappuccino clara */
+    border-radius: 10px;
+    padding: 15px;
     text-align: center;
+    transition: transform 0.3s;
 }
 
-.projetos h2 {
-    font-size: 2em;
+.project-card:hover {
+    transform: scale(1.05); /* Efeito de hover */
 }
 
-.projetos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+.project-card img {
+    max-width: 100%; /* Ajustar imagem ao card */
+    height: auto;
 }
 
-.card {
-    width: 30%;
-    padding: 1em;
-    background-color: #e0e0e0;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-/* Rodapé */
 footer {
-    background-color: #3e2723;
-    color: #fff;
-    padding: 1em;
     text-align: center;
-}
-
-footer nav a {
-    color: #fff;
-    text-decoration: none;
+    padding: 20px;
+    background-color: #c2b280; /* Cor cappuccino */
+    color: white;
 }
