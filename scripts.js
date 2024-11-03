@@ -14,7 +14,7 @@ function closeModal() {
 // Fecha o modal quando o usuário clica fora do conteúdo do modal
 window.onclick = function(event) {
     const modal = document.getElementById('modal');
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeModal();
     }
 }
@@ -36,17 +36,16 @@ document.getElementById('toggle-list').addEventListener('click', function() {
 window.onclick = function(event) {
     const list = document.getElementById('page-list');
     const overlay = document.getElementById('overlay');
-    if (event.target == overlay) {
+    if (event.target === overlay) {
         list.style.display = 'none';
         overlay.style.display = 'none'; // Ocultar o fundo escurecido
     }
 }
 
-// Adicione isso ao seu arquivo script.js
+// Adiciona evento ao botão de fechar
 document.getElementById('close-list').addEventListener('click', function() {
     var list = document.getElementById('page-list');
     var overlay = document.getElementById('overlay');
-    list.style.display = 'none';
-    overlay.style.display = 'none'; // Ocultar o fundo escurecido
+    list.style.display = 'none'; // Oculta a lista
+    overlay.style.display = 'none'; // Oculta o fundo escurecido
 });
-
