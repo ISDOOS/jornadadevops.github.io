@@ -3,6 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* Cor de fundo */
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea); /* Gradiente suave */
+    min-height: 100vh; /* Ocupa pelo menos a altura total da viewport */
+    display: flex; /* Permite o uso de flexbox, se necessário */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+a {
+    color: #7d5b3e; /* Cor dos links, harmonizando com o cabeçalho */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: color 0.3s ease; /* Transição suave para a cor do link */
+}
+
+a:hover {
+    color: #6F4C3E; /* Muda a cor ao passar o mouse */
 }
 
 header {
