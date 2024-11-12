@@ -9,162 +9,141 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #6F4C3E, #7d5b3e); /* Gradiente de cor */
+    background: linear-gradient(135deg, #6F4C3E, #7d5b3e);
     color: white;
-    padding: 40px; /* Mais espaço para um layout mais aberto */
+    padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-    position: relative; /* Para posicionar elementos dentro */
-    overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse o limite */
-    transition: background 0.5s; /* Transição suave de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s;
 }
 
 header:hover {
-    background: linear-gradient(135deg, #7d5b3e, #6F4C3E); /* Mudança de gradiente ao passar o mouse */
+    background: linear-gradient(135deg, #7d5b3e, #6F4C3E);
 }
 
 header h1 {
-    font-size: 2.5rem; /* Tamanho da fonte maior para destaque */
+    font-size: 2.5rem;
     margin: 0;
-    letter-spacing: 2px; /* Espaçamento entre letras para um visual mais elegante */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para profundidade */
-    transition: transform 0.3s, color 0.3s; /* Transição suave para transformação e cor */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, color 0.3s;
 }
 
 header h1:hover {
-    transform: scale(1.05); /* Efeito de pulsar no título ao passar o mouse */
-    color: #f4f4f4; /* Mudar a cor do texto ao passar o mouse */
+    transform: scale(1.05);
+    color: #f4f4f4;
 }
 
-/* Efeito de animação para o cabeçalho */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-header {
-    animation: fadeIn 0.5s ease; /* Animação ao carregar */
-}
-
-/* Linha de separação abaixo do cabeçalho */
 header::after {
     content: '';
     display: block;
-    height: 3px; /* Altura da linha */
-    background-color: #eaeaea; /* Cor da linha */
-    margin-top: 20px; /* Margem superior para espaçamento */
+    height: 3px;
+    background-color: #eaeaea;
+    margin-top: 20px;
 }
 
-/* Estilos do botão */
+/* Estilos para o botão */
 #toggle-list {
-    margin-left: 20px; /* Espaçamento em relação ao título */
+    margin-left: 20px;
     padding: 10px;
-    background-color: #7d5b3e; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
+    background-color: #7d5b3e;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s; /* Transição suave para fundo */
+    transition: background 0.3s;
 }
 
 #toggle-list:hover {
-    background-color: #6F4C3E; /* Cor de fundo ao passar o mouse */
+    background-color: #6F4C3E;
 }
 
-/* Estilos da lista */
+/* Estilos para a lista */
 #page-list {
-    list-style-type: none; /* Remove os marcadores da lista */
+    list-style-type: none;
     padding: 0;
-    background-color: rgba(226, 200, 180, 0.95); /* Cor de fundo da lista com opacidade */
-    position: fixed; /* Fixa na tela */
-    top: 0; /* Fica no topo da página */
-    left: 0; /* Começa na esquerda */
-    right: 0; /* Vai até a direita */
-    bottom: 0; /* Vai até o fundo */
-    z-index: 100; /* Aumenta o z-index para que fique sobre outros elementos */
-    display: none; /* Inicialmente oculto */
-    justify-content: center; /* Centraliza os itens na tela */
-    align-items: center; /* Alinha verticalmente */
-    transition: opacity 0.3s ease; /* Transição suave para opacidade */
-}
-
-/* Novo estilo para o card da lista */
-.card {
-    background-color: #e2c8b4; /* Cor de fundo do card */
-    border-radius: 10px; /* Adiciona borda arredondada ao card */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
-    padding: 20px; /* Espaçamento interno do card */
-    text-align: center; /* Centraliza o texto dentro do card */
-}
-
-/* Estilos dos links da lista */
-#page-list a {
-    text-decoration: none; /* Remove o sublinhado padrão */
-    color: #6F4C3E; /* Cor do texto dos links */
-    display: block; /* Faz com que cada link ocupe uma linha */
-    padding: 10px; /* Espaçamento interno para os links */
-    transition: background 0.3s, color 0.3s; /* Transição suave para fundo e cor */
-}
-
-#page-list a:hover {
-    background-color: #d1b59d; /* Cor de fundo ao passar o mouse */
-    color: #4F3C31; /* Mudar a cor do texto ao passar o mouse */
-}
-
-/* Estilos do Overlay */
-#overlay {
-    position: fixed; /* Fixa na tela */
+    background-color: rgba(226, 200, 180, 0.95);
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
-    z-index: 90; /* Fica abaixo da lista */
-    display: none; /* Inicialmente oculto */
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
 }
 
-/* Estilos do Modal */
-.modal {
-    display: none; /* Oculta o modal por padrão */
+.card {
+    background-color: #e2c8b4;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+}
+
+#page-list a {
+    text-decoration: none;
+    color: #6F4C3E;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#page-list a:hover {
+    background-color: #d1b59d;
+    color: #4F3C31;
+}
+
+#overlay {
     position: fixed;
-    z-index: 1; /* Fica em cima de outros elementos */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 90;
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Permite rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-    background-color: #fefefe; /* Cor de fundo do conteúdo do modal */
-    margin: 10% auto; /* Margem superior e centraliza horizontalmente */
+    background-color: #fefefe;
+    margin: 10% auto;
     padding: 20px;
-    border-radius: 10px; /* Borda arredondada */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
-    width: 90%; /* Largura do modal */
-    max-width: 600px; /* Largura máxima do modal */
-    transition: transform 0.3s ease; /* Transição suave para transformação */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
 }
 
 .close {
-    color: #6F4C3E; /* Cor do botão fechar */
+    color: #6F4C3E;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer; /* Cursor de ponteiro */
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #4F3C31; /* Cor ao passar o mouse */
-    text-decoration: none; /* Remove o sublinhado */
+    color: #4F3C31;
+    text-decoration: none;
 }
 
 nav ul {
@@ -193,10 +172,10 @@ nav ul li a:hover {
 }
 
 .profile-image {
-    width: 376px; /* Largura da imagem */
-    height: 387px; /* Altura da imagem */
-    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
-    border-radius: 10px; /* (opcional) Adiciona bordas arredondadas à imagem */
+    width: 376px;
+    height: 387px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .about-me {
@@ -207,22 +186,22 @@ nav ul li a:hover {
     padding: 40px;
 }
 
+/* Definindo a matriz 3x3 para os cards */
 .project-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 20px; /* Espaçamento entre os cards */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    justify-items: center;
 }
 
 .project-card {
-    flex: 1 1 calc(33.33% - 20px); /* Tamanho dos cards (3 por linha) */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos cards */
-    border-radius: 10px; /* Arredondar bordas dos cards */
-    overflow: hidden; /* Para evitar que a imagem ultrapasse os limites */
-    max-width: calc(33.33% - 20px); /* Garante que o card não exceda a largura */
-    display: flex; /* Adiciona flexbox dentro do card para alinhamento */
-    flex-direction: column; /* Alinha o conteúdo verticalmente */
-    text-align: center; /* Centraliza o texto dentro do card */
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    padding: 20px;
 }
 
 .project-card img {
@@ -233,18 +212,19 @@ nav ul li a:hover {
 
 .project-card h3 {
     margin: 10px 0 5px;
-    font-weight: 700; /* Mais forte para destacar */
+    font-weight: 700;
 }
 
 .project-card p {
     margin: 0;
-    font-weight: 400; /* Normal para o texto */
+    font-weight: 400;
 }
 
 .project-card:hover {
     transform: scale(1.05);
-    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de hover */
 }
+
+/* Estilos para o rodapé */
 footer {
     background-color: #6F4C3E;
     color: white;
@@ -266,7 +246,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Estilos para a seção "Sobre Mim" */
+/* Sobre Mim */
 .about-me {
     display: flex;
     align-items: center;
@@ -275,48 +255,33 @@ footer {
 }
 
 .about-me img {
-    border-radius: 50%; /* Deixa a imagem circular */
-    width: 150px; /* Largura da imagem */
-    height: 150px; /* Altura da imagem */
-    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .about-me p {
-    max-width: 600px; /* Largura máxima do texto */
+    max-width: 600px;
 }
 
-/* Transição suave para o modal */
-.modal.fade-in {
-    display: block;
-    animation: fadeIn 0.3s forwards; /* Animação de aparecer */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Media Queries para responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
     .project-container {
-        grid-template-columns: repeat(2, 1fr); /* Ajusta para duas colunas */
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
     }
 
     header h1 {
-        font-size: 2rem; /* Diminui o tamanho da fonte no cabeçalho */
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .project-container {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
     }
 
     header h1 {
-        font-size: 1.5rem; /* Diminui ainda mais o tamanho da fonte */
+        font-size: 1.5rem;
     }
 }
