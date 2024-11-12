@@ -1,83 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executor de Chroma Key</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #D2B08C; /* cor cappuccino */
-            color: #5C3D26; /* cor complementar */
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #3E2A1D; /* cor escura para título */
-        }
-        .container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        button {
-            background-color: #A67C52; /* cor de fundo do botão */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:disabled {
-            background-color: #B5A290; /* cor para botão desabilitado */
-        }
-        video {
-            width: 100%;
-            max-width: 640px;
-            display: block;
-            margin: 20px auto;
-        }
-    </style>
+    <title>Capa de Invisibilidade</title>
+    <!-- Importa o CSS -->
+    <link rel="stylesheet" href="pg1.css">
 </head>
 <body>
-    <h1>Executor de Chroma Key - Capa de Invisibilidade</h1>
-    <p>Carregue o vídeo e aplique um efeito de capa de invisibilidade utilizando a cor vermelha.</p>
-
-    <div class="container">
-        <button id="startButton">Carregar Código e Permitir Acesso à Câmera</button>
-        <button id="applyEffectButton" disabled>Acionar Capa de Invisibilidade</button>
-        <video id="videoElement" autoplay></video>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/pyodide@0.23.4/pyodide.js"></script>
-    <script>
-        let videoElement = document.getElementById("videoElement");
-        let startButton = document.getElementById("startButton");
-        let applyEffectButton = document.getElementById("applyEffectButton");
-
-        let videoStream;
-
-        async function start() {
-            // Solicitar permissão para usar a câmera
-            videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
-            videoElement.srcObject = videoStream;
-            startButton.disabled = true;
-            applyEffectButton.disabled = false;
-        }
-
-        // Função para aplicar o efeito de invisibilidade
-        async function applyEffect() {
-            // Aqui você chamaria o código Pyodide ou outra lógica para o efeito
-            console.log("Aplicando efeito...");
-        }
-
-        // Iniciar captura da câmera
-        startButton.addEventListener("click", start);
-
-        // Aplicar efeito de capa de invisibilidade
-        applyEffectButton.addEventListener("click", applyEffect);
-    </script>
+    <h1>Capa de Invisibilidade</h1>
+    <p>Este é um efeito de invisibilidade que usa a cor vermelha como referência. Clique em "Ativar Câmera" para começar.</p>
+    <button id="startButton">Ativar Câmera</button>
+    <button id="applyEffectButton" disabled>Acionar Capa de Invisibilidade</button>
+    <video id="videoElement" autoplay playsinline></video>
+    
+    <!-- Importa o JavaScript -->
+    <script src="pg1.js"></script>
 </body>
 </html>
