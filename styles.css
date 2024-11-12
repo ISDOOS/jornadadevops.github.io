@@ -2,90 +2,321 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
+    background: linear-gradient(135deg, #6F4C3E, #7d5b3e); /* Gradiente de cor */
+    color: white;
+    padding: 40px; /* Mais espaço para um layout mais aberto */
     text-align: center;
-    padding: 20px;
-    background-color: #D7CCC8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    position: relative; /* Para posicionar elementos dentro */
+    overflow: hidden; /* Para esconder qualquer conteúdo que ultrapasse o limite */
+    transition: background 0.5s; /* Transição suave de fundo */
+}
+
+header:hover {
+    background: linear-gradient(135deg, #7d5b3e, #6F4C3E); /* Mudança de gradiente ao passar o mouse */
 }
 
 header h1 {
-    color: #6F4C3E;
+    font-size: 2.5rem; /* Tamanho da fonte maior para destaque */
+    margin: 0;
+    letter-spacing: 2px; /* Espaçamento entre letras para um visual mais elegante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para profundidade */
+    transition: transform 0.3s, color 0.3s; /* Transição suave para transformação e cor */
 }
 
-header button {
-    background-color: #6F4C3E;
-    color: white;
-    border: none;
+header h1:hover {
+    transform: scale(1.05); /* Efeito de pulsar no título ao passar o mouse */
+    color: #f4f4f4; /* Mudar a cor do texto ao passar o mouse */
+}
+
+/* Efeito de animação para o cabeçalho */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: fadeIn 0.5s ease; /* Animação ao carregar */
+}
+
+/* Linha de separação abaixo do cabeçalho */
+header::after {
+    content: '';
+    display: block;
+    height: 3px; /* Altura da linha */
+    background-color: #eaeaea; /* Cor da linha */
+    margin-top: 20px; /* Margem superior para espaçamento */
+}
+
+/* Estilos do botão */
+#toggle-list {
+    margin-left: 20px; /* Espaçamento em relação ao título */
     padding: 10px;
+    background-color: #7d5b3e; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s; /* Transição suave para fundo */
 }
 
+#toggle-list:hover {
+    background-color: #6F4C3E; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos da lista */
 #page-list {
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #F5F5F5;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    background-color: rgba(226, 200, 180, 0.95); /* Cor de fundo da lista com opacidade */
+    position: fixed; /* Fixa na tela */
+    top: 0; /* Fica no topo da página */
+    left: 0; /* Começa na esquerda */
+    right: 0; /* Vai até a direita */
+    bottom: 0; /* Vai até o fundo */
+    z-index: 100; /* Aumenta o z-index para que fique sobre outros elementos */
+    display: none; /* Inicialmente oculto */
+    justify-content: center; /* Centraliza os itens na tela */
+    align-items: center; /* Alinha verticalmente */
+    transition: opacity 0.3s ease; /* Transição suave para opacidade */
 }
 
+/* Novo estilo para o card da lista */
+.card {
+    background-color: #e2c8b4; /* Cor de fundo do card */
+    border-radius: 10px; /* Adiciona borda arredondada ao card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+    padding: 20px; /* Espaçamento interno do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
+
+/* Estilos dos links da lista */
+#page-list a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #6F4C3E; /* Cor do texto dos links */
+    display: block; /* Faz com que cada link ocupe uma linha */
+    padding: 10px; /* Espaçamento interno para os links */
+    transition: background 0.3s, color 0.3s; /* Transição suave para fundo e cor */
+}
+
+#page-list a:hover {
+    background-color: #d1b59d; /* Cor de fundo ao passar o mouse */
+    color: #4F3C31; /* Mudar a cor do texto ao passar o mouse */
+}
+
+/* Estilos do Overlay */
 #overlay {
-    display: none;
-    position: fixed;
+    position: fixed; /* Fixa na tela */
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
+    z-index: 90; /* Fica abaixo da lista */
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1; /* Fica em cima de outros elementos */
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Cor de fundo do conteúdo do modal */
+    margin: 10% auto; /* Margem superior e centraliza horizontalmente */
+    padding: 20px;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+    width: 90%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima do modal */
+    transition: transform 0.3s ease; /* Transição suave para transformação */
+}
+
+.close {
+    color: #6F4C3E; /* Cor do botão fechar */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.close:hover,
+.close:focus {
+    color: #4F3C31; /* Cor ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.profile-image {
+    width: 376px; /* Largura da imagem */
+    height: 387px; /* Altura da imagem */
+    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
+    border-radius: 10px; /* (opcional) Adiciona bordas arredondadas à imagem */
+}
+
+.about-me {
+    max-width: 600px;
+}
+
+.projects-section {
+    padding: 40px;
 }
 
 .project-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
 .project-card {
-    background-color: #E0E0E0;
-    margin: 15px;
-    padding: 20px;
+    flex: 1 1 calc(33.33% - 20px); /* Tamanho dos cards (3 por linha) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos cards */
+    border-radius: 10px; /* Arredondar bordas dos cards */
+    overflow: hidden; /* Para evitar que a imagem ultrapasse os limites */
+    max-width: calc(33.33% - 20px); /* Garante que o card não exceda a largura */
+    display: flex; /* Adiciona flexbox dentro do card para alinhamento */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    width: 200px;
 }
 
+.project-card h3 {
+    margin: 10px 0 5px;
+    font-weight: 700; /* Mais forte para destacar */
+}
+
+.project-card p {
+    margin: 0;
+    font-weight: 400; /* Normal para o texto */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de hover */
+}
 footer {
+    background-color: #6F4C3E;
+    color: white;
     text-align: center;
-    padding: 10px;
-    background-color: #D7CCC8;
+    padding: 20px 0;
 }
 
-footer .social-links a {
+.social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
     margin: 0 10px;
-    color: #6F4C3E;
+    color: white;
     text-decoration: none;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #FFFFFF;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.social-links a:hover {
+    text-decoration: underline;
 }
 
-.modal-content img {
-    max-width: 100%;
-    margin-bottom: 10px;
+/* Estilos para a seção "Sobre Mim" */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.about-me img {
+    border-radius: 50%; /* Deixa a imagem circular */
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    object-fit: cover; /* Para garantir que a imagem mantenha a proporção dentro do tamanho definido */
+}
+
+.about-me p {
+    max-width: 600px; /* Largura máxima do texto */
+}
+
+/* Transição suave para o modal */
+.modal.fade-in {
+    display: block;
+    animation: fadeIn 0.3s forwards; /* Animação de aparecer */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para duas colunas */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Diminui o tamanho da fonte no cabeçalho */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Diminui ainda mais o tamanho da fonte */
+    }
 }
