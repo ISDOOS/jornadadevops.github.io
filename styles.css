@@ -2,286 +2,90 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #6F4C3E, #7d5b3e);
-    color: white;
-    padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    transition: background 0.5s;
-}
-
-header:hover {
-    background: linear-gradient(135deg, #7d5b3e, #6F4C3E);
+    padding: 20px;
+    background-color: #D7CCC8;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s, color 0.3s;
+    color: #6F4C3E;
 }
 
-header h1:hover {
-    transform: scale(1.05);
-    color: #f4f4f4;
-}
-
-header::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background-color: #eaeaea;
-    margin-top: 20px;
-}
-
-/* Estilos para o botão */
-#toggle-list {
-    margin-left: 20px;
-    padding: 10px;
-    background-color: #7d5b3e;
+header button {
+    background-color: #6F4C3E;
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#toggle-list:hover {
-    background-color: #6F4C3E;
-}
-
-/* Estilos para a lista */
-#page-list {
-    list-style-type: none;
-    padding: 0;
-    background-color: rgba(226, 200, 180, 0.95);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease;
-}
-
-.card {
-    background-color: #e2c8b4;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    text-align: center;
-}
-
-#page-list a {
-    text-decoration: none;
-    color: #6F4C3E;
-    display: block;
     padding: 10px;
-    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
-#page-list a:hover {
-    background-color: #d1b59d;
-    color: #4F3C31;
+#page-list {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5F5F5;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 #overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 90;
-    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #E0E0E0;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #D7CCC8;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #6F4C3E;
+    text-decoration: none;
 }
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    width: 90%;
-    max-width: 600px;
-    transition: transform 0.3s ease;
-}
-
-.close {
-    color: #6F4C3E;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #4F3C31;
-    text-decoration: none;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.intro-section {
-    display: flex;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.profile-image {
-    width: 376px;
-    height: 387px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.about-me {
-    max-width: 600px;
-}
-
-.projects-section {
-    padding: 40px;
-}
-
-/* Definindo a matriz 3x3 para os cards */
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 20px;
-    justify-items: center;
-}
-
-.project-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s;
-    padding: 20px;
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.project-card h3 {
-    margin: 10px 0 5px;
-    font-weight: 700;
-}
-
-.project-card p {
-    margin: 0;
-    font-weight: 400;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-/* Estilos para o rodapé */
-footer {
-    background-color: #6F4C3E;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.social-links {
-    margin: 10px 0;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Sobre Mim */
-.about-me {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.about-me img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.about-me p {
-    max-width: 600px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .project-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-container {
-        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
+.modal-content img {
+    max-width: 100%;
+    margin-bottom: 10px;
 }
