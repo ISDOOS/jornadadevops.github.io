@@ -1,5 +1,6 @@
+/* Fonte e background */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #1a202c;
   color: #fff;
 }
@@ -10,26 +11,28 @@ header {
 
 footer {
   background-color: #2d3748;
-  padding: 3rem 0;
-  text-align: center;
 }
 
-header nav a {
+/* Links */
+header nav a, footer a {
   color: #edf2f7;
 }
 
-header nav a:hover {
+header nav a:hover, footer a:hover {
   color: #cbd5e0;
 }
 
-section h2 {
+/* Títulos */
+section h2, section h3 {
   color: #cbd5e0;
 }
 
+/* Texto */
 section p {
   color: #e2e8f0;
 }
 
+/* Cor de fundo */
 .bg-gray-800 {
   background-color: #2d3748;
 }
@@ -52,6 +55,10 @@ section p {
 
 .text-2xl {
   font-size: 1.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
 }
 
 .font-bold {
@@ -114,6 +121,7 @@ section p {
   align-items: center;
 }
 
+/* Efeito hover */
 .hover\:text-gray-400:hover {
   color: #cbd5e0;
 }
@@ -122,16 +130,20 @@ section p {
   text-align: center;
 }
 
-/* Novas Adições para o Rodapé e Redes Sociais */
-
-footer .fab {
-  font-size: 2rem; /* Tamanho dos ícones */
-  margin: 0 1rem;
-  color: #edf2f7; /* Cor padrão dos ícones */
-  transition: transform 0.3s ease, color 0.3s ease;
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
 }
 
-footer .fab:hover {
-  transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
-  color: #ffffff; /* Cor do ícone ao passar o mouse */
+#modal img {
+  max-width: 90%;
+  max-height: 80%;
 }
