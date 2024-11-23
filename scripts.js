@@ -1,14 +1,16 @@
-// Toggle menu visibility
-const menuButton = document.getElementById('menuButton');
-const dropdownMenu = document.getElementById('dropdownMenu');
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');  // Seleciona todos os cards
 
-menuButton.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('hidden');
-});
+    cards.forEach(card => {
+        const imageWrapper = card.querySelector('.image-wrapper');
+        const overlay = card.querySelector('.overlay');
 
-// Close dropdown when clicking outside
-document.addEventListener('click', (e) => {
-    if (!menuButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add('hidden');
-    }
+        imageWrapper.addEventListener('mouseover', function() {
+            overlay.style.display = 'flex';
+        });
+
+        imageWrapper.addEventListener('mouseout', function() {
+            overlay.style.display = 'none';
+        });
+    });
 });
