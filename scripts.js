@@ -1,29 +1,14 @@
-document.getElementById("toggle-list").addEventListener("click", function() {
-    document.getElementById("page-list").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
+// Toggle menu visibility
+const menuButton = document.getElementById('menuButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+menuButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
 });
 
-document.getElementById("close-list").addEventListener("click", function() {
-    document.getElementById("page-list").style.display = "none";
-    document.getElementById("overlay").style.display = "none";
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add('hidden');
+    }
 });
-
-document.getElementById("overlay").addEventListener("click", function() {
-    document.getElementById("page-list").style.display = "none";
-    document.getElementById("overlay").style.display = "none";
-});
-
-function openModal(title, imageUrl, description, repoLink) {
-    document.getElementById("modal-title").innerText = title;
-    document.getElementById("modal-image").src = imageUrl;
-    document.getElementById("modal-description").innerText = description;
-    document.getElementById("modal-repo-link").href = repoLink;
-
-    document.getElementById("modal").style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
-document.querySelector(".close").addEventListener("click", closeModal);
