@@ -1,75 +1,132 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Jornada DevOps</title>
-  <link href="style.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
- </head>
- <body class="bg-gray-900 text-white font-roboto">
-  <header class="bg-gray-800 p-4 flex justify-between items-center">
-   <h1 class="text-3xl font-bold">Jornada DevOps</h1>
-   <nav>
-    <ul class="flex space-x-4">
-     <li><a class="hover:text-gray-400" href="#frontend">FrontEnd</a></li>
-     <li><a class="hover:text-gray-400" href="#backend">BackEnd</a></li>
-     <li><a class="hover:text-gray-400" href="#praticas">Práticas</a></li>
-    </ul>
-   </nav>
-  </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada DevOps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
 
-  <main class="p-8">
-   <section class="mb-12" id="frontend">
-    <h2 class="text-2xl font-bold mb-4">FrontEnd</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <a href="https://github.com/seu-repositorio/frontend-1">
-       <img alt="Placeholder image for FrontEnd project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/AE1bdelRSxyIFq5ZPqx2O1DLDnFqTX1SQDweWOVLQLkfm9nnA.jpg" width="300"/>
-      </a>
-      <h3 class="text-xl font-bold">Projeto FrontEnd 1</h3>
-      <p class="text-gray-400">Descrição do projeto FrontEnd 1.</p>
-     </div>
-     <!-- Repita o formato acima para os outros projetos FrontEnd, substituindo o link do repositório e a imagem -->
-    </div>
-   </section>
+    <!-- Seção Header -->
+    <header class="bg-blue-800 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Jornada DevOps</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#front-end" class="hover:underline">FrontEnd</a></li>
+                    <li><a href="#back-end" class="hover:underline">BackEnd</a></li>
+                    <li><a href="#praticas" class="hover:underline">Práticas</a></li>
+                    <li><a href="#sobre" class="hover:underline">Sobre Mim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-   <section class="mb-12" id="backend">
-    <h2 class="text-2xl font-bold mb-4">BackEnd</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <a href="https://github.com/seu-repositorio/backend-1">
-       <img alt="Placeholder image for BackEnd project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/FT0SULvfzi2aNqxc4fefEovoDIxsv1wMAnny54wPcQBjN7PPB.jpg" width="300"/>
-      </a>
-      <h3 class="text-xl font-bold">Projeto BackEnd 1</h3>
-      <p class="text-gray-400">Descrição do projeto BackEnd 1.</p>
-     </div>
-     <!-- Repita o formato acima para os outros projetos BackEnd -->
-    </div>
-   </section>
+    <!-- Seção Front-End -->
+    <section id="front-end" class="p-8 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-6">FrontEnd</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto1.jpg" alt="Projeto 1" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 1</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 1.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto2.jpg" alt="Projeto 2" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 2</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 2.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto3.jpg" alt="Projeto 3" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 3</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 3.</p>
+            </div>
+        </div>
+    </section>
 
-   <section class="mb-12" id="praticas">
-    <h2 class="text-2xl font-bold mb-4">Práticas</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <a href="https://github.com/seu-repositorio/praticas-1">
-       <img alt="Placeholder image for Práticas project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BkLMaJH2Cdo5MF3Ti2L2a0Izzpqj1dTj5WlJulXznuu5sf5JA.jpg" width="300"/>
-      </a>
-      <h3 class="text-xl font-bold">Projeto Práticas 1</h3>
-      <p class="text-gray-400">Descrição do projeto Práticas 1.</p>
-     </div>
-     <!-- Repita o formato acima para os outros projetos Práticas -->
-    </div>
-   </section>
+    <!-- Seção Back-End -->
+    <section id="back-end" class="p-8 bg-white">
+        <h2 class="text-3xl font-bold text-center mb-6">BackEnd</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto1.jpg" alt="Projeto 1" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 1</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 1.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto2.jpg" alt="Projeto 2" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 2</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 2.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto3.jpg" alt="Projeto 3" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 3</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 3.</p>
+            </div>
+        </div>
+    </section>
 
-   <section class="flex items-center justify-center mb-12">
-    <img alt="Placeholder image for personal summary" class="w-48 h-48 object-cover rounded-full mr-8" height="300" src="https://storage.googleapis.com/a1aa/image/SDUSrBZftkwvTK2MNPceTWIDyS7pZH0pgFGNuxdMfxlqm9nnA.jpg" width="300"/>
-    <div>
-     <h2 class="text-2xl font-bold mb-4">Sobre Mim</h2>
-     <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
-    </div>
-   </section>
-  </main>
- </body>
+    <!-- Seção Práticas -->
+    <section id="praticas" class="p-8 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-6">Práticas</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto1.jpg" alt="Projeto 1" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 1</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 1.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto2.jpg" alt="Projeto 2" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 2</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 2.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="project-card p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                <img src="imagens/projeto3.jpg" alt="Projeto 3" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4">Projeto 3</h3>
+                <p class="mt-2 text-gray-600">Descrição do projeto 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="p-8 bg-white">
+        <h2 class="text-3xl font-bold text-center mb-4">Sobre Mim</h2>
+        <div class="border-t border-gray-300 pt-6">
+            <p class="text-lg text-gray-700">Aqui vai um pouco sobre mim...</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-blue-800 text-white py-4">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="https://www.instagram.com" class="hover:text-blue-300">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com" class="hover:text-blue-300">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com" class="hover:text-blue-300">
+                <i class="fab fa-facebook text-2xl"></i>
+            </a>
+            <a href="https://web.whatsapp.com" class="hover:text-blue-300">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+            <a href="https://github.com" class="hover:text-blue-300">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
 </html>
