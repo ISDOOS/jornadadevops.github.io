@@ -10,6 +10,8 @@ header {
 
 footer {
   background-color: #2d3748;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 header nav a {
@@ -118,4 +120,18 @@ section p {
 
 .text-center {
   text-align: center;
+}
+
+/* Novas Adições para o Rodapé e Redes Sociais */
+
+footer .fab {
+  font-size: 2rem; /* Tamanho dos ícones */
+  margin: 0 1rem;
+  color: #edf2f7; /* Cor padrão dos ícones */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .fab:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+  color: #ffffff; /* Cor do ícone ao passar o mouse */
 }
