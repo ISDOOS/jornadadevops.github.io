@@ -3,46 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Cards com Imagens e Links</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!-- Referência ao CSS -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="cards-container">
-        <!-- Card 1 -->
-        <div class="card">
-            <div class="image-wrapper">
-                <img class="card-image" src="images/imagem1.jpg" alt="Imagem 1">
-                <div class="overlay">
-                    <span class="overlay-text">Texto 1 ao passar o mouse</span>
-                </div>
-            </div>
-            <a href="https://link-do-repositorio-1.com" target="_blank" class="card-link">Ver Repositório 1</a>
-        </div>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#front-end">Front-End</a></li>
+                <li><a href="#back-end">Back-End</a></li>
+                <li><a href="#full-stack">Full-Stack</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="image-wrapper">
-                <img class="card-image" src="images/imagem2.jpg" alt="Imagem 2">
-                <div class="overlay">
-                    <span class="overlay-text">Texto 2 ao passar o mouse</span>
-                </div>
-            </div>
-            <a href="https://link-do-repositorio-2.com" target="_blank" class="card-link">Ver Repositório 2</a>
-        </div>
+    <!-- Seção Front-End -->
+    <div id="front-end" class="section">
+        <h2>Front-End</h2>
+        <p>Descrição e links para repositórios de Front-End</p>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <div class="image-wrapper">
-                <img class="card-image" src="images/imagem3.jpg" alt="Imagem 3">
-                <div class="overlay">
-                    <span class="overlay-text">Texto 3 ao passar o mouse</span>
-                </div>
+        <div class="cards">
+            <!-- Cartão 1 -->
+            <div class="card">
+                <img src="front-end-project-1.jpg" alt="Imagem do Projeto 1">
+                <h3>Projeto Front-End 1</h3>
+                <p>Descrição curta do projeto Front-End 1.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-1" target="_blank">Ver Repositório</a>
             </div>
-            <a href="https://link-do-repositorio-3.com" target="_blank" class="card-link">Ver Repositório 3</a>
+
+            <!-- Cartão 2 -->
+            <div class="card">
+                <img src="front-end-project-2.jpg" alt="Imagem do Projeto 2">
+                <h3>Projeto Front-End 2</h3>
+                <p>Descrição curta do projeto Front-End 2.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-2" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 3 -->
+            <div class="card">
+                <img src="front-end-project-3.jpg" alt="Imagem do Projeto 3">
+                <h3>Projeto Front-End 3</h3>
+                <p>Descrição curta do projeto Front-End 3.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-3" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 4 -->
+            <div class="card">
+                <img src="front-end-project-4.jpg" alt="Imagem do Projeto 4">
+                <h3>Projeto Front-End 4</h3>
+                <p>Descrição curta do projeto Front-End 4.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-4" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 5 -->
+            <div class="card">
+                <img src="front-end-project-5.jpg" alt="Imagem do Projeto 5">
+                <h3>Projeto Front-End 5</h3>
+                <p>Descrição curta do projeto Front-End 5.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-5" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 6 -->
+            <div class="card">
+                <img src="front-end-project-6.jpg" alt="Imagem do Projeto 6">
+                <h3>Projeto Front-End 6</h3>
+                <p>Descrição curta do projeto Front-End 6.</p>
+                <a href="https://github.com/seu-usuario/repositorio-front-end-6" target="_blank">Ver Repositório</a>
+            </div>
         </div>
     </div>
 
-    <script src="scripts/script.js"></script>  <!-- Referência ao JS -->
+    <!-- Seção Back-End -->
+    <div id="back-end" class="section">
+        <h2>Back-End</h2>
+        <p>Descrição e links para repositórios de Back-End</p>
+
+        <div class="cards">
+            <!-- Cartão 1 -->
+            <div class="card">
+                <img src="back-end-project-1.jpg" alt="Imagem do Projeto 1">
+                <h3>Projeto Back-End 1</h3>
+                <p>Descrição curta do projeto Back-End 1.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-1" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 2 -->
+            <div class="card">
+                <img src="back-end-project-2.jpg" alt="Imagem do Projeto 2">
+                <h3>Projeto Back-End 2</h3>
+                <p>Descrição curta do projeto Back-End 2.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-2" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 3 -->
+            <div class="card">
+                <img src="back-end-project-3.jpg" alt="Imagem do Projeto 3">
+                <h3>Projeto Back-End 3</h3>
+                <p>Descrição curta do projeto Back-End 3.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-3" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 4 -->
+            <div class="card">
+                <img src="back-end-project-4.jpg" alt="Imagem do Projeto 4">
+                <h3>Projeto Back-End 4</h3>
+                <p>Descrição curta do projeto Back-End 4.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-4" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 5 -->
+            <div class="card">
+                <img src="back-end-project-5.jpg" alt="Imagem do Projeto 5">
+                <h3>Projeto Back-End 5</h3>
+                <p>Descrição curta do projeto Back-End 5.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-5" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 6 -->
+            <div class="card">
+                <img src="back-end-project-6.jpg" alt="Imagem do Projeto 6">
+                <h3>Projeto Back-End 6</h3>
+                <p>Descrição curta do projeto Back-End 6.</p>
+                <a href="https://github.com/seu-usuario/repositorio-back-end-6" target="_blank">Ver Repositório</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Full-Stack -->
+    <div id="full-stack" class="section">
+        <h2>Full-Stack</h2>
+        <p>Descrição e links para repositórios de Full-Stack</p>
+
+        <div class="cards">
+            <!-- Cartão 1 -->
+            <div class="card">
+                <img src="full-stack-project-1.jpg" alt="Imagem do Projeto 1">
+                <h3>Projeto Full-Stack 1</h3>
+                <p>Descrição curta do projeto Full-Stack 1.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-1" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 2 -->
+            <div class="card">
+                <img src="full-stack-project-2.jpg" alt="Imagem do Projeto 2">
+                <h3>Projeto Full-Stack 2</h3>
+                <p>Descrição curta do projeto Full-Stack 2.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-2" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 3 -->
+            <div class="card">
+                <img src="full-stack-project-3.jpg" alt="Imagem do Projeto 3">
+                <h3>Projeto Full-Stack 3</h3>
+                <p>Descrição curta do projeto Full-Stack 3.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-3" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 4 -->
+            <div class="card">
+                <img src="full-stack-project-4.jpg" alt="Imagem do Projeto 4">
+                <h3>Projeto Full-Stack 4</h3>
+                <p>Descrição curta do projeto Full-Stack 4.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-4" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 5 -->
+            <div class="card">
+                <img src="full-stack-project-5.jpg" alt="Imagem do Projeto 5">
+                <h3>Projeto Full-Stack 5</h3>
+                <p>Descrição curta do projeto Full-Stack 5.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-5" target="_blank">Ver Repositório</a>
+            </div>
+
+            <!-- Cartão 6 -->
+            <div class="card">
+                <img src="full-stack-project-6.jpg" alt="Imagem do Projeto 6">
+                <h3>Projeto Full-Stack 6</h3>
+                <p>Descrição curta do projeto Full-Stack 6.</p>
+                <a href="https://github.com/seu-usuario/repositorio-full-stack-6" target="_blank">Ver Repositório</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
