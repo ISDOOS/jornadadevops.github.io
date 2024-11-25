@@ -1,17 +1,13 @@
-/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
 }
-
 .title-effect {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
-
 .title-effect:hover {
     transform: scale(1.05);
 }
-
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -24,10 +20,8 @@ body {
     font-size: 1.5rem;
     display: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
 .back-to-top:hover {
     background-color: #45a049;
 }
-
-/* Adicione mais estilos específicos aqui, conforme necessário */
