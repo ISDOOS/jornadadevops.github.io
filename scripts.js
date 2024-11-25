@@ -1,60 +1,26 @@
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
+// Exibe um alerta quando o botão for clicado
+document.getElementById('alert-button').addEventListener('click', () => {
+    alert('Você clicou no botão!');
 });
 
-// Scroll Reveal
-window.addEventListener('scroll', reveal);
+// Adiciona destaque no menu ao rolar a página
+const menuLinks = document.querySelectorAll('.menu-link');
+const sections = document.querySelectorAll('section');
 
-function reveal() {
-  const elements = document.querySelectorAll('.reveal');
-  elements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    if (elementTop < window.innerHeight) {
-      element.classList.add('active');
-    }
-  });
-}
-
-// Modal
-document.querySelectorAll('.project-image').forEach(img => {
-  img.addEventListener('click', (e) => {
-    const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modal-image');
-    modalImage.src = e.target.src;
-    modal.classList.remove('hidden');
-  });
-});
-
-document.getElementById('close-modal').addEventListener('click', () => {
-  document.getElementById('modal').classList.add('hidden');
-});
-
-// Back to Top Button
 window.addEventListener('scroll', () => {
-  const backToTopButton = document.getElementById('backToTop');
-  if (window.scrollY > 300) {
-    backToTopButton.classList.remove('hidden');
-  } else {
-    backToTopButton.classList.add('hidden');
-  }
-});
+    let current = '';
 
-document.getElementById('backToTop').addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 50;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
 
-// Form Submit
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  document.getElementById('form-response').classList.remove('hidden');
-  document.getElementById('contactForm').reset();
+    menuLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
 });
