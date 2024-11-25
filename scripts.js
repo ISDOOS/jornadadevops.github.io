@@ -1,26 +1,14 @@
-// Exibe um alerta quando o botão for clicado
-document.getElementById('alert-button').addEventListener('click', () => {
-    alert('Você clicou no botão!');
-});
+// Função para mostrar o botão "Voltar ao topo" quando o usuário rolar para baixo
+window.onscroll = function() {
+    let backToTopButton = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
 
-// Adiciona destaque no menu ao rolar a página
-const menuLinks = document.querySelectorAll('.menu-link');
-const sections = document.querySelectorAll('section');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 50;
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    menuLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+// Função para rolar até o topo quando o botão for clicado
+document.getElementById("back-to-top").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
