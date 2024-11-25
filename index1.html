@@ -1,3 +1,4 @@
+
 <html lang="pt-BR">
  <head>
   <meta charset="utf-8"/>
@@ -5,335 +6,387 @@
   <title>
    Jornada DevOps
   </title>
-  <link href="style.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com">
   </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .title-effect {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .title-effect:hover {
+            transform: scale(1.05);
+        }
+  </style>
  </head>
- <body class="bg-gray-900 text-white font-roboto">
-  <header class="bg-gray-800 p-4 flex justify-between items-center">
-   <h1 class="text-3xl font-bold">
-    Jornada DevOps
-   </h1>
-   <nav>
-    <ul class="flex space-x-4">
-     <li>
-      <a class="hover:text-gray-400" href="#frontend">
-       FrontEnd
-      </a>
-     </li>
-     <li>
-      <a class="hover:text-gray-400" href="#backend">
-       BackEnd
-      </a>
-     </li>
-     <li>
-      <a class="hover:text-gray-400" href="#praticas">
-       Práticas
-      </a>
-     </li>
-    </ul>
-   </nav>
+ <body class="bg-gray-900 text-gray-200">
+  <!-- Seção Header -->
+  <header class="bg-gray-800 text-white py-4 shadow-md">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-3xl font-bold title-effect">
+     Jornada DevOps
+    </h1>
+    <nav>
+     <ul class="flex space-x-6">
+      <li>
+       <a class="hover:underline" href="#javascript">
+        JavaScript
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#python">
+        Python
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#java">
+        Java
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#html">
+        HTML
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#php">
+        PHP
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#cpp">
+        C++
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#devops">
+        DevOps
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#sobre">
+        Sobre Mim
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
   </header>
-  <main class="p-8">
-   <section class="mb-12" id="frontend">
-    <h2 class="text-2xl font-bold mb-4">
-     FrontEnd
+  <main>
+   <!-- Seção Sobre Mim -->
+   <section class="p-8 bg-gray-800" id="sobre">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     Sobre Mim
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/AE1bdelRSxyIFq5ZPqx2O1DLDnFqTX1SQDweWOVLQLkfm9nnA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 1
-      </h3>
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+     <img alt="Foto de perfil de um desenvolvedor" class="w-48 h-48 object-cover rounded-full mx-auto md:mx-0 md:mr-6" height="200" src="https://storage.googleapis.com/a1aa/image/PhXX8NWKYf0FfUeshbUW8eyluG3bGQRaAezkgvlTf1vfkVA6JA.jpg" width="200"/>
+     <div class="mt-6 md:mt-0">
       <p class="text-gray-400">
-       Descrição do projeto FrontEnd 1.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 2" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/aSUPkXoeDp1UVaeFY2xFSaU0xPeOJfUu8mlXeWYlBHtSY2f8E.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 2
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 2.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 3" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/L1dSWJufFoT1d60beGLFyNCf1iCwfLJDW72iEZaWPEYIO7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 3
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 3.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 4" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/NplfIWuKyfhQwktr3K6Asgc5fTwYEXdfLSetilzGTh5mc2f8E.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 4
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 4.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 5" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/10IEoxrX3ha7CF41D3HNW8Fypdx8efdMJJxdQBainRdSzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 5
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 5.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 6" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/txhGq6EECP5oLhMnyyNoGrVMQOS2eu4TTieSTbTBYkSTzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 6
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 6.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 7" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/X6uS2Hm0wJpeNiVzeNHWuY7iu0deIFOhGXLrz1HS4qMeL7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 7
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 7.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 8" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/CYVDJoDjJxLeaqS7Ak3dKRFt3KubU91FOcfVKepgBZeCN7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 8
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 8.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for FrontEnd project 9" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/luWTCGchNEY0NRqZf2trHEavL9aLGqz8DuBWeGWKOFHGzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto FrontEnd 9
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto FrontEnd 9.
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
      </div>
     </div>
    </section>
-   <section class="mb-12" id="backend">
-    <h2 class="text-2xl font-bold mb-4">
-     BackEnd
+   <!-- Seção JavaScript -->
+   <section class="p-8 bg-gray-800" id="javascript">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     JavaScript
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/FT0SULvfzi2aNqxc4fefEovoDIxsv1wMAnny54wPcQBjN7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 1
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 1.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 2" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/tWdHeZv6yk2aTimGRa3Vk1pNbq11ks6pOqPdswz4RC7uZfzTA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 2
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 2.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 3" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/4X8nP0wG35IpE5ORDyXbQpe5lFoGyBKYl7XdLp9jTzkyZfzTA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 3
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 3.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 4" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/eoHuaLqaRNRpIa4uzUEB0qljY35LThJHWLceOPfgxrTtm9nnA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 4
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 4.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 5" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/XOHIthR1SR45JdxXFct1OmHIQpFbyHQG5CYKDEK6bfeZzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 5
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 5.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 6" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/Umpx2BB2NgrkH1uC8UwmOAVgIVJSc71mA2vv0quWeO6zZfzTA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 6
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 6.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 7" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/AISYYMfzTKxEVSdOnNVvFmekyuVzbHazt1hnYjSuJAnIzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 7
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 7.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 8" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/RQWIE9WtOT6KAB3EYIxeqCGxRhLkExut8kPZFQ1gDfDhzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 8
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 8.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for BackEnd project 9" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/HakMfAja0rQSBawPXjHcmausyd6I2aWmjgEkLymcK9wnZfzTA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto BackEnd 9
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto BackEnd 9.
-      </p>
-     </div>
+     </article>
     </div>
    </section>
-   <section class="mb-12" id="praticas">
-    <h2 class="text-2xl font-bold mb-4">
-     Práticas
+   <!-- Seção Python -->
+   <section class="p-8 bg-gray-900" id="python">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     Python
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 1" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/BkLMaJH2Cdo5MF3Ti2L2a0Izzpqj1dTj5WlJulXznuu5sf5JA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 1
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Python com um servidor robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/python1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 1.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 2" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/fGBGY6uQaGVSeUi9SovYf0NKfBCEqVk34KtPOZ15JTdXM7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 2
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Python com um servidor robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/python2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 2.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 3" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/IwPlStPhxqZyDRL0548fsfy5M0bInR0QvRQkzgH65fHVm9nnA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 3
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Python com um servidor robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/python3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
       </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 3.
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
       </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 4" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/qQMwx2acEGoqKpUW64eCoqqadixAyuzvCcPeEHeGvwlHm9nnA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 4
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 4.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 5" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/JLSG6fdb8vy6LqcdsCx0bqnMe5nH8fvxjUTUC4ev2J2AM7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 5
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 5.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 6" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/mgb4SSIGBv5PEp4eKw1M29BRILcEfq6L9hgT21mdlaTczennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 6
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 6.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 7" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/HUk03WAnGw5AFlWp9fPE6xCK14PRZdSQwEB1qn6eiBYMzennA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 7
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 7.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 8" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/sY044iqQnOJwKZg5mditft03m54fweYcGUdHmZbZXlram9nnA.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 8
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 8.
-      </p>
-     </div>
-     <div class="bg-gray-800 p-4 rounded-lg">
-      <img alt="Placeholder image for Práticas project 9" class="w-full h-48 object-cover rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/8ajQFhCxWX64Epo9DcXmZXfqWTfBMx4FfafyZXcSNv8pN7PPB.jpg" width="300"/>
-      <h3 class="text-xl font-bold">
-       Projeto Práticas 9
-      </h3>
-      <p class="text-gray-400">
-       Descrição do projeto Práticas 9.
-      </p>
-     </div>
+     </article>
     </div>
    </section>
-   <section class="flex items-center justify-center mb-12">
-    <img alt="Placeholder image for personal summary" class="w-48 h-48 object-cover rounded-full mr-8" height="300" src="https://storage.googleapis.com/a1aa/image/SDUSrBZftkwvTK2MNPceTWIDyS7pZH0pgFGNuxdMfxlqm9nnA.jpg" width="300"/>
-    <div>
-     <h2 class="text-2xl font-bold mb-4">
-      Sobre Mim
-     </h2>
-     <p class="text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-     </p>
+   <!-- Seção Java -->
+   <section class="p-8 bg-gray-800" id="java">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     Java
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Java com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/java1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
+      </p>
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Java com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/java2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
+      </p>
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto Java com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/java3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
+      </p>
+     </article>
     </div>
    </section>
+   <!-- Seção HTML -->
+   <section class="p-8 bg-gray-900" id="html">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     HTML
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto HTML com um layout moderno e responsivo" class="w-full h-48 object-cover rounded-md" height="400" src="images/html1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
+      </p>
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto HTML com um layout moderno e responsivo" class="w-full h-48 object-cover rounded-md" height="400" src="images/html2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
+      </p>
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto HTML com um layout moderno e responsivo" class="w-full h-48 object-cover rounded-md" height="400" src="images/html3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
+      </p>
+     </article>
+    </div>
+   </section>
+   <!-- Seção PHP -->
+   <section class="p-8 bg-gray-800" id="php">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     PHP
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto PHP com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/php1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
+      </p>
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto PHP com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/php2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
+      </p>
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto PHP com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/php3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
+      </p>
+     </article>
+    </div>
+   </section>
+   <!-- Seção C++ -->
+   <section class="p-8 bg-gray-900" id="cpp">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     C++
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto C++ com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/cpp1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
+      </p>
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto C++ com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/cpp2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
+      </p>
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto C++ com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/cpp3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
+      </p>
+     </article>
+    </div>
+   </section>
+   <!-- Seção DevOps -->
+   <section class="p-8 bg-gray-800" id="devops">
+    <h2 class="text-3xl font-bold text-center mb-6">
+     DevOps
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Card 1 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto DevOps com um pipeline de CI/CD" class="w-full h-48 object-cover rounded-md" height="400" src="images/devops1.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 1</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 1.
+      </p>
+     </article>
+     <!-- Card 2 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto C++ com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/cpp2.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 2</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 2.
+      </p>
+     </article>
+     <!-- Card 3 -->
+     <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+      <img alt="Imagem de um projeto C++ com um sistema robusto e eficiente" class="w-full h-48 object-cover rounded-md" height="400" src="images/cpp3.jpg" width="600"/>
+      <h3 class="text-xl font-semibold mt-4">
+       <a href="#" class="hover:underline">Projeto 3</a>
+      </h3>
+      <p class="mt-2 text-gray-400">
+       Descrição do projeto 3.
+      </p>
+     </article>
+    </div>
+   </section>
+  
   </main>
-  <footer class="bg-gray-800 p-4">
-   <div class="flex justify-center space-x-4">
-    <a class="text-gray-400 hover:text-white" href="#">
-     <i class="fab fa-linkedin">
-     </i>
-    </a>
-    <a class="text-gray-400 hover:text-white" href="#">
-     <i class="fab fa-instagram">
-     </i>
-    </a>
-    <a class="text-gray-400 hover:text-white" href="#">
-     <i class="fab fa-whatsapp">
-     </i>
-    </a>
-    <a class="text-gray-400 hover:text-white" href="#">
-     <i class="fab fa-github">
-     </i>
-    </a>
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-white py-4">
+   <div class="container mx-auto text-center">
+    <div class="flex justify-center space-x-6 mb-4">
+     <a class="hover:text-gray-400" href="https://facebook.com" target="_blank">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="https://twitter.com" target="_blank">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="https://linkedin.com" target="_blank">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="https://github.com" target="_blank">
+      <i class="fab fa-github">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="https://instagram.com" target="_blank">
+      <i class="fab fa-instagram"></i>
+     </a>
+    </div>
+    <p class="text-gray-400">
+     © 2023 Jornada DevOps. Todos os direitos reservados.
+    </p>
    </div>
   </footer>
-  <script src="scripts.js">
-  </script>
  </body>
 </html>
