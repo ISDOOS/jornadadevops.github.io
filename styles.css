@@ -1,27 +1,30 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
 .title-effect {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
+
 .title-effect:hover {
     transform: scale(1.05);
 }
+
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.75rem 1rem;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a5568; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.5rem;
-    display: none;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none; /* Inicialmente oculto */
 }
+
 .back-to-top:hover {
-    background-color: #45a049;
+    background-color: #2d3748; /* Cor de fundo ao passar o mouse */
 }
