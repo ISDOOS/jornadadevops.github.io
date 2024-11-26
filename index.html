@@ -10,6 +10,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .title-effect {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -38,6 +39,19 @@
         .scroll-to-top:hover {
             background-color: #2d3748; /* Cor do botão ao passar o mouse */
         }
+        /* Notificação */
+        .notification {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #38a169; /* Cor da notificação */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -57,6 +71,7 @@
                     <li><a class="hover:underline" href="#sobre">Sobre Mim</a></li>
                 </ul>
             </nav>
+            <button id="themeToggle" class="ml-4 p-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition">Trocar Tema</button>
         </div>
     </header>
     <main>
@@ -64,7 +79,7 @@
         <section class="p-8 bg-gray-800" id="sobre">
             <h2 class="text-3xl font-bold text-center mb-6">Sobre Mim</h2>
             <div class="container mx-auto flex flex-col md:flex-row items-center">
-                <img alt="Foto de perfil de um desenvolvedor" class="w-48 h-48 object-cover rounded-full mx-auto md:mx-0 md:mr-6" height="200" src="https://storage.googleapis.com/a1aa/image/PhXX8NWKYf0FfUeshbUW8eyluG3bGQRaAezkgvlTf1vfkVA6JA.jpg" width="200"/>
+                <img alt="Foto de perfil de um desenvolvedor" class="w-48 h-48 object-cover rounded-full mx-auto md:mx-0 md:mr-6" height="200" src="https ://storage.googleapis.com/a1aa/image/PhXX8NWKYf0FfUeshbUW8eyluG3bGQRaAezkgvlTf1vfkVA6JA.jpg" width="200"/>
                 <div class="mt-6 md:mt-0">
                     <p class="text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -74,7 +89,7 @@
         </section>
         <!-- Seção JavaScript -->
         <section class="p-8 bg-gray-800" id="javascript">
- <h2 class="text-3xl font-bold text-center mb-6">JavaScript</h2>
+            <h2 class="text-3xl font-bold text-center mb-6">JavaScript</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
                 <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
@@ -107,6 +122,26 @@
                     </p>
                 </article>
             </div>
+        </section>
+        <!-- Formulário de Contato -->
+        <section class="p-8 bg-gray-800" id="contato">
+            <h2 class="text-3xl font-bold text-center mb-6">Contato</h2>
+            <form id="contactForm" class="max-w-md mx-auto bg-gray-700 p-6 rounded-lg">
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2" for="name">Nome</label>
+                    <input class="w-full p-2 rounded" type="text" id="name" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2" for="email">Email</label>
+                    <input class="w-full p-2 rounded" type="email" id="email" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2" for="message">Mensagem</label>
+                    <textarea class="w-full p-2 rounded" id="message" rows="4" required></textarea>
+                </div>
+                <button class="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition" type="submit">Enviar</button>
+            </form>
+            <div class="notification" id="notification ">Mensagem enviada com sucesso!</div>
         </section>
     </main>
     <!-- Rodapé -->
@@ -154,7 +189,30 @@
         document.getElementById('scrollToTop').onclick = function() {
             window.scrollTo({top: 0, behavior: 'smooth'});
         };
+
+        // Alternar entre temas claro e escuro
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.onclick = function() {
+            const body = document.body;
+            body.classList.toggle('bg-gray-900');
+            body.classList.toggle('bg-white');
+            body.classList.toggle('text-gray-200');
+            body.classList.toggle('text-gray-800');
+        };
+
+        // Enviar formulário e mostrar notificação
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            notification.style.opacity = '1';
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 300);
+            }, 3000);
+        };
     </script>
- ```html
 </body>
 </html>
