@@ -22,6 +22,22 @@
         a {
             transition: color 0.3s ease;
         }
+        /* Estilo do botão "Retornar ao Topo" */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4a5568; /* Cor do botão */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: none; /* Inicialmente oculto */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .scroll-to-top:hover {
+            background-color: #2d3748; /* Cor do botão ao passar o mouse */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -58,11 +74,11 @@
         </section>
         <!-- Seção JavaScript -->
         <section class="p-8 bg-gray-800" id="javascript">
-            <h2 class="text-3xl font-bold text-center mb-6">JavaScript</h2>
+ <h2 class="text-3xl font-bold text-center mb-6">JavaScript</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
                 <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                    <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400 " src="images/javascript1.jpg" width="600"/>
+                    <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript1.jpg" width="600"/>
                     <h3 class="text-xl font-semibold mt-4">
                         <a href="#" class="hover:underline">Projeto 1</a>
                     </h3>
@@ -117,9 +133,28 @@
                 © 2023 Jornada DevOps. Todos os direitos reservados.
             </p>
             <p class="text-gray-400">
-                <a class="hover:underline" href="#privacy-policy">Política de Privacidade</a>
+                <a class="hover:underline" href="policy.html">Política de Privacidade</a>
             </p>
         </div>
     </footer>
+    <!-- Botão "Retornar ao Topo" -->
+    <button class="scroll-to-top" id="scrollToTop">↑ Retornar ao Topo</button>
+    <script>
+        // Mostrar o botão "Retornar ao Topo" ao rolar a página
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Função para rolar suavemente para o topo
+        document.getElementById('scrollToTop').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+ ```html
 </body>
 </html>
