@@ -10,7 +10,6 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .title-effect {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -70,22 +69,92 @@
                     <p class="text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                </ ```html
                 </div>
             </div>
         </section>
+        <!-- Seção JavaScript -->
+        <section class="p-8 bg-gray-800" id="javascript">
+ <h2 class="text-3xl font-bold text-center mb-6">JavaScript</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript1.jpg" width="600"/>
+                    <h3 class="text-xl font-semibold mt-4">
+                        <a href="#" class="hover:underline">Projeto 1</a>
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Descrição do projeto 1.
+                    </p>
+                </article>
+                <!-- Card 2 -->
+                <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript2.jpg" width="600"/>
+                    <h3 class="text-xl font-semibold mt-4">
+                        <a href="#" class="hover:underline">Projeto 2</a>
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Descrição do projeto 2.
+                    </p>
+                </article>
+                <!-- Card 3 -->
+                <article class="project-card p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                    <img alt="Imagem de um projeto JavaScript com um layout moderno e interativo" class="w-full h-48 object-cover rounded-md" height="400" src="images/javascript3.jpg" width="600"/>
+                    <h3 class="text-xl font-semibold mt-4">
+                        <a href="#" class="hover:underline">Projeto 3</a>
+                    </h3>
+                    <p class="mt-2 text-gray-400">
+                        Descrição do projeto 3.
+                    </p>
+                </article>
+            </div>
+        </section>
     </main>
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Retornar ao Topo</button>
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a class="hover:text-gray-400" href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="hover:text-gray-400" href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="hover:text-gray-400" href="https://linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="hover:text-gray-400" href="https://github.com" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="hover:text-gray-400" href="https://instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">
+                © 2023 Jornada DevOps. Todos os direitos reservados.
+            </p>
+            <p class="text-gray-400">
+                <a class="hover:underline" href="policy.html">Política de Privacidade</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Botão "Retornar ao Topo" -->
+    <button class="scroll-to-top" id="scrollToTop">↑ Retornar ao Topo</button>
     <script>
-        // Mostrar botão "Retornar ao Topo" ao rolar a página
+        // Mostrar o botão "Retornar ao Topo" ao rolar a página
         window.onscroll = function() {
-            const button = document.querySelector('.scroll-to-top');
+            const button = document.getElementById('scrollToTop');
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 button.style.display = "block";
             } else {
                 button.style.display = "none";
             }
         };
+
+        // Função para rolar suavemente para o topo
+        document.getElementById('scrollToTop').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
     </script>
+ ```html
 </body>
 </html>
