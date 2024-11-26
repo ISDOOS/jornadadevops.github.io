@@ -11,20 +11,25 @@ body {
     transform: scale(1.05);
 }
 
-.back-to-top {
+/* Transição suave para links */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Estilo do botão "Retornar ao Topo" */
+.scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4a5568; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #4a5568; /* Cor do botão */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
     display: none; /* Inicialmente oculto */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-    background-color: #2d3748; /* Cor de fundo ao passar o mouse */
+.scroll-to-top:hover {
+    background-color: #2d3748; /* Cor do botão ao passar o mouse */
 }
