@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Financeira Interativa</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  <style>
+    :root {
+      --dourado: #FFD700;
+      --verde: #4CAF50;
+      --fundo: #2d2d2d;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: var(--fundo);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .input-group {
+      margin: 15px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--dourado);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid var(--verde);
+      border-radius: 6px;
+      background: #3d3d3d;
+      color: white;
+      font-size: 16px;
+    }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: var(--verde);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .output {
+      background-color: #3d3d3d;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      min-height: 100px;
+      white-space: pre-wrap;
+    }
+
+    .formulas {
+      background-color: #3d3d3d;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .formula-item {
+      margin: 10px 0;
+    }
+
+    .formula-item h3 {
+      color: var(--dourado);
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="color: var(--dourado); text-align: center; margin-bottom: 25px;">HP12c Web - Calculadora Financeira</h1>
+    
+    <!-- Inputs -->
+    <div class="input-group">
+      <label>Valor Principal (R$):</label>
+      <input type="number" id="principal" value="1000" step="100">
+    </div>
+
+    <div class="input-group">
+      <label>Taxa de Juros (% ao ano):</label>
+      <input type="number" id="taxa" value="5" step="0.5">
+    </div>
+
+    <div class="input-group">
+      <label>Tempo (anos):</label>
+      <input type="number" id="tempo" value="10" step="1">
+    </div>
+
+    <!-- Botões -->
+    <div class="botoes">
+      <button onclick="calcular('simples')">Juros Simples</button>
+      <button onclick="calcular('composto')">Juros Composto</button>
+      <button onclick="calcular('montante')">Montante Total</button>
+      <button onclick="calcular('comparacao')">Comparar Métodos</button>
+    </div>
+
+    <!-- Saída -->
+    <div class="output" id="output"></div>
+
+    <!-- Explicações Matemáticas -->
+    <div class="formulas">
+      <div class="formula-item">
+        <h3>Juros Simples</h3>
+        <p>Fórmula: J = P × i × t</p>
+        <p>Onde:<br>
+        P = Valor Principal<br>
+        i = Taxa de Juros (decimal)<br>
+        t = Tempo</p>
+      </div>
+
+      <div class="formula-item">
+        <h3>Juros Compostos</h3>
+        <p>Fórmula: M = P × (1 + i)<sup>t</sup></p>
+        <p>Onde:<br>
+        M = Montante Final</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let pyodide;
+    let carregado = false;
+
+    async function iniciarPyodide() {
+      pyodide = await loadPyodide();
+      await pyodide.loadPackage("micropip");
+      
+      await pyodide.runPythonAsync(`
+        def calcular_juros_simples(P, i, t):
+            juros = P * (i/100) * t
+            montante = P + juros
+            return (
+                f"🔢 Juros Simples:\\n"
+                f"• Principal: R$ {P:,.2f}\\n"
+                f"• Taxa: {i}% ao ano\\n"
+                f"• Tempo: {t} anos\\n"
+                f"📊 Resultado:\\n"
+                f"→ Juros: R$ {juros:,.2f}\\n"
+                f"→ Montante Total: R$ {montante:,.2f}"
+            )
+
+        def calcular_juros_compostos(P, i, t):
+            montante = P * (1 + (i/100)) ** t
+            juros = montante - P
+            return (
+                f"🧮 Juros Compostos:\\n"
+                f"• Principal: R$ {P:,.2f}\\n"
+                f"• Taxa: {i}% ao ano\\n"
+                f"• Tempo: {t} anos\\n"
+                f"📈 Resultado:\\n"
+                f"→ Juros: R$ {juros:,.2f}\\n"
+                f"→ Montante Final: R$ {montante:,.2f}"
+            )
+
+        def comparar_metodos(P, i, t):
+            simples = P * (i/100) * t
+            composto = P * (1 + (i/100)) ** t - P
+            
+            diferenca = composto - simples
+            percentual = (diferenca/simples) * 100 if simples != 0 else 0
+            
+            return (
+                f"⚖️ Comparação:\\n"
+                f"• Juros Simples: R$ {simples:,.2f}\\n"
+                f"• Juros Compostos: R$ {composto:,.2f}\\n"
+                f"💡 Diferença:\\n"
+                f"→ Valor: R$ {diferenca:,.2f}\\n"
+                f"→ Percentual: {percentual:,.1f}%"
+            )
+      `);
+      
+      carregado = true;
+    }
+
+    async function calcular(tipo) {
+      if (!carregado) {
+        document.getElementById('output').textContent = "Aguarde... Inicializando Python!";
+        return;
+      }
+
+      try {
+        const P = parseFloat(document.getElementById('principal').value);
+        const i = parseFloat(document.getElementById('taxa').value);
+        const t = parseFloat(document.getElementById('tempo').value);
+
+        let resultado;
+        switch(tipo) {
+          case 'simples':
+            resultado = await pyodide.runPythonAsync(`calcular_juros_simples(${P}, ${i}, ${t})`);
+            break;
+          case 'composto':
+            resultado = await pyodide.runPythonAsync(`calcular_juros_compostos(${P}, ${i}, ${t})`);
+            break;
+          case 'comparacao':
+            resultado = await pyodide.runPythonAsync(`comparar_metodos(${P}, ${i}, ${t})`);
+            break;
+        }
+
+        document.getElementById('output').textContent = resultado;
+      } catch (erro) {
+        document.getElementById('output').textContent = `❌ Erro: Verifique os valores inseridos!\n${erro}`;
+      }
+    }
+
+    // Inicia o Pyodide ao carregar a página
+    iniciarPyodide();
+  </script>
+</body>
+</html>
