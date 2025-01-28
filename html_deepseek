@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Prompts para IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #4f46e5, #6b46c1);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Inputs e Botões */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4f46e5;
+            outline: none;
+        }
+
+        .btn {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #4338ca;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2d3748;
+            color: white;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #4f46e5;
+        }
+
+        /* Efeitos de Copiar */
+        .copy-btn {
+            background: #48bb78;
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .copy-btn:hover {
+            background: #38a169;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Assistente de Prompts</h1>
+        <p>Crie instruções perfeitas para IA em segundos! 🚀</p>
+    </header>
+
+    <div class="container">
+        <!-- Card 1: Input da Profissão -->
+        <div class="card">
+            <div class="input-group">
+                <label>Qual profissional você precisa?</label>
+                <input type="text" id="profissao" placeholder="Ex: Psicólogo infantil especializado em TDAH">
+            </div>
+            <button class="btn" onclick="gerarPrompt()">Gerar Prompt</button>
+        </div>
+
+        <!-- Card 2: Prompt Gerado -->
+        <div class="card">
+            <h2>Prompt Gerado:</h2>
+            <div id="prompt-output" class="input-group">
+                <textarea id="prompt-text" readonly></textarea>
+            </div>
+            <button class="btn copy-btn" onclick="copiarPrompt()">
+                <i class="fas fa-copy"></i> Copiar
+            </button>
+        </div>
+
+        <!-- Card 3: Desenvolver Perguntas -->
+        <div class="card">
+            <div class="input-group">
+                <label>Faça suas perguntas baseadas no prompt:</label>
+                <textarea id="perguntas" placeholder="Cole o prompt aqui e faça perguntas..."></textarea>
+            </div>
+            <button class="btn" onclick="gerarRespostas()">Gerar Respostas</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <p>© 2024 Assistente de Prompts. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function gerarPrompt() {
+            const profissao = document.getElementById('profissao').value;
+            const promptText = `Atue como um ${profissao}. Forneça respostas detalhadas, práticas e com exemplos quando necessário. Priorize clareza e precisão técnica.`;
+            document.getElementById('prompt-text').value = promptText;
+        }
+
+        function copiarPrompt() {
+            const promptText = document.getElementById('prompt-text');
+            promptText.select();
+            navigator.clipboard.writeText(promptText.value);
+            alert("Prompt copiado! ✅");
+        }
+
+        function gerarRespostas() {
+            // Simulação - Substituir por API
+            const perguntas = document.getElementById('perguntas').value;
+            alert("Respostas geradas! (Simulação)");
+        }
+    </script>
+</body>
+</html>
